@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A74B1BC198B500686068 /* AppDelegate.swift */; };
+		F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A74D1BC198B500686068 /* ViewController.swift */; };
+		F3D8A7511BC198B500686068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A74F1BC198B500686068 /* Main.storyboard */; };
+		F3D8A7541BC198B500686068 /* Virtual_Classroom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A7521BC198B500686068 /* Virtual_Classroom.xcdatamodeld */; };
+		F3D8A7561BC198B500686068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A7551BC198B500686068 /* Assets.xcassets */; };
+		F3D8A7591BC198B500686068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A7571BC198B500686068 /* LaunchScreen.storyboard */; };
+		F3D8A7641BC198B500686068 /* Virtual_ClassroomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A7631BC198B500686068 /* Virtual_ClassroomTests.swift */; };
+		F3D8A76F1BC198B500686068 /* Virtual_ClassroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A76E1BC198B500686068 /* Virtual_ClassroomUITests.swift */; };
+		F3D8A77D1BC1A0E800686068 /* App_Backgorund.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */; settings = {ASSET_TAGS = (); }; };
+		F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3D8A7601BC198B500686068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3D8A7401BC198B400686068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3D8A7471BC198B400686068;
+			remoteInfo = "Virtual Classroom";
+		};
+		F3D8A76B1BC198B500686068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3D8A7401BC198B400686068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3D8A7471BC198B400686068;
+			remoteInfo = "Virtual Classroom";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3D8A7481BC198B500686068 /* Virtual Classroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Classroom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D8A74B1BC198B500686068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3D8A74D1BC198B500686068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3D8A7501BC198B500686068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3D8A7531BC198B500686068 /* Virtual_Classroom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Virtual_Classroom.xcdatamodel; sourceTree = "<group>"; };
+		F3D8A7551BC198B500686068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3D8A7581BC198B500686068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3D8A75A1BC198B500686068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D8A75F1BC198B500686068 /* Virtual ClassroomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual ClassroomTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D8A7631BC198B500686068 /* Virtual_ClassroomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virtual_ClassroomTests.swift; sourceTree = "<group>"; };
+		F3D8A7651BC198B500686068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D8A76A1BC198B500686068 /* Virtual ClassroomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual ClassroomUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D8A76E1BC198B500686068 /* Virtual_ClassroomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virtual_ClassroomUITests.swift; sourceTree = "<group>"; };
+		F3D8A7701BC198B500686068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = App_Backgorund.jpg; sourceTree = "<group>"; };
+		F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseHomeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3D8A7451BC198B400686068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D8A75C1BC198B500686068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D8A7671BC198B500686068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3D8A73F1BC198B400686068 = {
+			isa = PBXGroup;
+			children = (
+				F3D8A74A1BC198B500686068 /* Virtual Classroom */,
+				F3D8A7621BC198B500686068 /* Virtual ClassroomTests */,
+				F3D8A76D1BC198B500686068 /* Virtual ClassroomUITests */,
+				F3D8A7491BC198B500686068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3D8A7491BC198B500686068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3D8A7481BC198B500686068 /* Virtual Classroom.app */,
+				F3D8A75F1BC198B500686068 /* Virtual ClassroomTests.xctest */,
+				F3D8A76A1BC198B500686068 /* Virtual ClassroomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3D8A74A1BC198B500686068 /* Virtual Classroom */ = {
+			isa = PBXGroup;
+			children = (
+				F3D8A74B1BC198B500686068 /* AppDelegate.swift */,
+				F3D8A74D1BC198B500686068 /* ViewController.swift */,
+				F3D8A74F1BC198B500686068 /* Main.storyboard */,
+				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
+				F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */,
+				F3D8A7551BC198B500686068 /* Assets.xcassets */,
+				F3D8A7571BC198B500686068 /* LaunchScreen.storyboard */,
+				F3D8A75A1BC198B500686068 /* Info.plist */,
+				F3D8A7521BC198B500686068 /* Virtual_Classroom.xcdatamodeld */,
+			);
+			path = "Virtual Classroom";
+			sourceTree = "<group>";
+		};
+		F3D8A7621BC198B500686068 /* Virtual ClassroomTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3D8A7631BC198B500686068 /* Virtual_ClassroomTests.swift */,
+				F3D8A7651BC198B500686068 /* Info.plist */,
+			);
+			path = "Virtual ClassroomTests";
+			sourceTree = "<group>";
+		};
+		F3D8A76D1BC198B500686068 /* Virtual ClassroomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3D8A76E1BC198B500686068 /* Virtual_ClassroomUITests.swift */,
+				F3D8A7701BC198B500686068 /* Info.plist */,
+			);
+			path = "Virtual ClassroomUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3D8A7471BC198B400686068 /* Virtual Classroom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D8A7731BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual Classroom" */;
+			buildPhases = (
+				F3D8A7441BC198B400686068 /* Sources */,
+				F3D8A7451BC198B400686068 /* Frameworks */,
+				F3D8A7461BC198B400686068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Virtual Classroom";
+			productName = "Virtual Classroom";
+			productReference = F3D8A7481BC198B500686068 /* Virtual Classroom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3D8A75E1BC198B500686068 /* Virtual ClassroomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D8A7761BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual ClassroomTests" */;
+			buildPhases = (
+				F3D8A75B1BC198B500686068 /* Sources */,
+				F3D8A75C1BC198B500686068 /* Frameworks */,
+				F3D8A75D1BC198B500686068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3D8A7611BC198B500686068 /* PBXTargetDependency */,
+			);
+			name = "Virtual ClassroomTests";
+			productName = "Virtual ClassroomTests";
+			productReference = F3D8A75F1BC198B500686068 /* Virtual ClassroomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3D8A7691BC198B500686068 /* Virtual ClassroomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D8A7791BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual ClassroomUITests" */;
+			buildPhases = (
+				F3D8A7661BC198B500686068 /* Sources */,
+				F3D8A7671BC198B500686068 /* Frameworks */,
+				F3D8A7681BC198B500686068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3D8A76C1BC198B500686068 /* PBXTargetDependency */,
+			);
+			name = "Virtual ClassroomUITests";
+			productName = "Virtual ClassroomUITests";
+			productReference = F3D8A76A1BC198B500686068 /* Virtual ClassroomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3D8A7401BC198B400686068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Vlass;
+				TargetAttributes = {
+					F3D8A7471BC198B400686068 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					F3D8A75E1BC198B500686068 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = F3D8A7471BC198B400686068;
+					};
+					F3D8A7691BC198B500686068 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = F3D8A7471BC198B400686068;
+					};
+				};
+			};
+			buildConfigurationList = F3D8A7431BC198B400686068 /* Build configuration list for PBXProject "Virtual Classroom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3D8A73F1BC198B400686068;
+			productRefGroup = F3D8A7491BC198B500686068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3D8A7471BC198B400686068 /* Virtual Classroom */,
+				F3D8A75E1BC198B500686068 /* Virtual ClassroomTests */,
+				F3D8A7691BC198B500686068 /* Virtual ClassroomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3D8A7461BC198B400686068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D8A7591BC198B500686068 /* LaunchScreen.storyboard in Resources */,
+				F3D8A77D1BC1A0E800686068 /* App_Backgorund.jpg in Resources */,
+				F3D8A7561BC198B500686068 /* Assets.xcassets in Resources */,
+				F3D8A7511BC198B500686068 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D8A75D1BC198B500686068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D8A7681BC198B500686068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3D8A7441BC198B400686068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
+				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
+				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
+				F3D8A7541BC198B500686068 /* Virtual_Classroom.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D8A75B1BC198B500686068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D8A7641BC198B500686068 /* Virtual_ClassroomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D8A7661BC198B500686068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D8A76F1BC198B500686068 /* Virtual_ClassroomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3D8A7611BC198B500686068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3D8A7471BC198B400686068 /* Virtual Classroom */;
+			targetProxy = F3D8A7601BC198B500686068 /* PBXContainerItemProxy */;
+		};
+		F3D8A76C1BC198B500686068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3D8A7471BC198B400686068 /* Virtual Classroom */;
+			targetProxy = F3D8A76B1BC198B500686068 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3D8A74F1BC198B500686068 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3D8A7501BC198B500686068 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3D8A7571BC198B500686068 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3D8A7581BC198B500686068 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3D8A7711BC198B500686068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3D8A7721BC198B500686068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3D8A7741BC198B500686068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Virtual Classroom/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-Classroom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3D8A7751BC198B500686068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Virtual Classroom/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-Classroom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F3D8A7771BC198B500686068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Virtual ClassroomTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-ClassroomTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Virtual Classroom.app/Virtual Classroom";
+			};
+			name = Debug;
+		};
+		F3D8A7781BC198B500686068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Virtual ClassroomTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-ClassroomTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Virtual Classroom.app/Virtual Classroom";
+			};
+			name = Release;
+		};
+		F3D8A77A1BC198B500686068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Virtual ClassroomUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-ClassroomUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Virtual Classroom";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F3D8A77B1BC198B500686068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Virtual ClassroomUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-ClassroomUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Virtual Classroom";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3D8A7431BC198B400686068 /* Build configuration list for PBXProject "Virtual Classroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D8A7711BC198B500686068 /* Debug */,
+				F3D8A7721BC198B500686068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D8A7731BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual Classroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D8A7741BC198B500686068 /* Debug */,
+				F3D8A7751BC198B500686068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3D8A7761BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual ClassroomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D8A7771BC198B500686068 /* Debug */,
+				F3D8A7781BC198B500686068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3D8A7791BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual ClassroomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D8A77A1BC198B500686068 /* Debug */,
+				F3D8A77B1BC198B500686068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F3D8A7521BC198B500686068 /* Virtual_Classroom.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3D8A7531BC198B500686068 /* Virtual_Classroom.xcdatamodel */,
+			);
+			currentVersion = F3D8A7531BC198B500686068 /* Virtual_Classroom.xcdatamodel */;
+			path = Virtual_Classroom.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F3D8A7401BC198B400686068 /* Project object */;
+}
