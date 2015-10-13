@@ -18,20 +18,20 @@ class CourseHomeViewController: UIViewController, UITableViewDelegate {
     
     
     // This function will need DB calls to get the courses for the user, and load their information
-    func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int
-    {
+    func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
         return courseExamples.count
     
     }
+    
     // This function will need DB calls to get the courses for the user, and load their information
-
-    func tableView(tableView : UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell{
+    func tableView(tableView : UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
         let cell  = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
         cell.textLabel?.text = courseExamples[indexPath.row]
         
         return cell
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

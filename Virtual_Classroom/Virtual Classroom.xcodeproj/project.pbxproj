@@ -493,6 +493,7 @@
 				F3D8A7751BC198B500686068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3D8A7761BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual ClassroomTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +502,7 @@
 				F3D8A7781BC198B500686068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3D8A7791BC198B500686068 /* Build configuration list for PBXNativeTarget "Virtual ClassroomUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +511,7 @@
 				F3D8A77B1BC198B500686068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
