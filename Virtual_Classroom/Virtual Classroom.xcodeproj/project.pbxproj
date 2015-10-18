@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3B1655D1BD40F5E00303C24 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1655C1BD40F5E00303C24 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F3B1655E1BD40F5E00303C24 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1655C1BD40F5E00303C24 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F3B1655F1BD40F5E00303C24 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1655C1BD40F5E00303C24 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A74B1BC198B500686068 /* AppDelegate.swift */; };
 		F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A74D1BC198B500686068 /* ViewController.swift */; };
 		F3D8A7511BC198B500686068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A74F1BC198B500686068 /* Main.storyboard */; };
@@ -40,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F3B1655C1BD40F5E00303C24 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3D8A7481BC198B500686068 /* Virtual Classroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Classroom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D8A74B1BC198B500686068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3D8A74D1BC198B500686068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +106,6 @@
 				F3D8A74B1BC198B500686068 /* AppDelegate.swift */,
 				F3D8A74D1BC198B500686068 /* ViewController.swift */,
 				F3D8A74F1BC198B500686068 /* Main.storyboard */,
-				F3B1655C1BD40F5E00303C24 /* LoginViewController.swift */,
 				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
 				F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */,
 				F3D8A7551BC198B500686068 /* Assets.xcassets */,
@@ -272,7 +267,6 @@
 			files = (
 				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
-				F3B1655D1BD40F5E00303C24 /* LoginViewController.swift in Sources */,
 				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
 				F3D8A7541BC198B500686068 /* Virtual_Classroom.xcdatamodeld in Sources */,
 			);
@@ -282,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B1655E1BD40F5E00303C24 /* LoginViewController.swift in Sources */,
 				F3D8A7641BC198B500686068 /* Virtual_ClassroomTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B1655F1BD40F5E00303C24 /* LoginViewController.swift in Sources */,
 				F3D8A76F1BC198B500686068 /* Virtual_ClassroomUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
