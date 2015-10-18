@@ -44,6 +44,7 @@
                                     <color key="titleColor" red="0.0" green="0.96293397932690805" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VwK-BC-uhY"/>
                                     <segue destination="p2e-9I-zaD" kind="show" id="E1K-Vk-lBr"/>
                                 </connections>
                             </button>
@@ -617,6 +618,6 @@ Must contain at least uppercase letter</string>
         <image name="App_Backgorund.jpg" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wID-lk-kDJ"/>
+        <segue reference="E1K-Vk-lBr"/>
     </inferredMetricsTieBreakers>
 </document>
