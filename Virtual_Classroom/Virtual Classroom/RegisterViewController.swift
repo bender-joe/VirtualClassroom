@@ -20,13 +20,15 @@ class RegisterViewController : UIViewController, UITextFieldDelegate{
     @IBOutlet var password: UITextField!
     @IBOutlet var confirmPassword: UITextField!
     
-    func displayAlert(title: String, message: String) {
+    let BackToLoginSegue = "validCreation"
+    func displayAlert(title: String, message: String, successful: Bool) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
+            if (successful == true){
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
         })))
         
         self.presentViewController(alert, animated: true, completion: nil)
@@ -102,17 +104,27 @@ class RegisterViewController : UIViewController, UITextFieldDelegate{
         errorMessage = validateFields();
         
         if errorMessage != "" {
-            displayAlert("Error", message: errorMessage)
+            displayAlert("Error", message: errorMessage, successful : false)
         } else{
             errorMessage = "Please Try Again"
             // got good input here lets create the user
             var user = PFUser()
             user.username = emailAddress.text
             user.password = password.text
+            user["firstname"] = firstName.text!
+            user["lastname"] = lastName.text!
+            user["school"] = school.text!
+            
             
             user.signUpInBackgroundWithBlock({ (success, error) -> Void in
                 if error == nil {
                     // sign up successful
+                    print("creation successful\n")
+                    
+                    // segue back to login page
+                    self.displayAlert("Creation Successful", message: "You can now login with your account credentials", successful : true)
+//                    self.performSegueWithIdentifier(self.BackToLoginSegue, sender: sender)
+                    
                 } else {
                     
                     // trying to get the error message from error
@@ -120,7 +132,7 @@ class RegisterViewController : UIViewController, UITextFieldDelegate{
                         
                         errorMessage = errorString
                     }
-                    self.displayAlert("Failed to Create Account", message: errorMessage)
+                    self.displayAlert("Failed to Create Account", message: errorMessage, successful:  false)
                 }
             })
             
@@ -134,7 +146,7 @@ class RegisterViewController : UIViewController, UITextFieldDelegate{
     }
     
     // function takes a text field and which must be there and returns boolean
-    func textFieldSHouldReturn(textField : UITextField!) -> Bool {
+    func textFieldShouldReturn(textField : UITextField!) -> Bool {
         
         textField.resignFirstResponder()
         
