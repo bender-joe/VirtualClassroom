@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396C9301BD4245E00E5CA16 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F396C9341BD43CF300E5CA16 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9321BD43CF300E5CA16 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
+		F396C9351BD43CF300E5CA16 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9331BD43CF300E5CA16 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		F396C9371BD43D4500E5CA16 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9361BD43D4500E5CA16 /* AudioToolbox.framework */; };
+		F396C9391BD43D4B00E5CA16 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9381BD43D4B00E5CA16 /* CFNetwork.framework */; };
+		F396C93B1BD43D5600E5CA16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C93A1BD43D5600E5CA16 /* CoreGraphics.framework */; };
+		F396C93D1BD43D5D00E5CA16 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C93C1BD43D5D00E5CA16 /* CoreLocation.framework */; };
+		F396C93F1BD43D7900E5CA16 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C93E1BD43D7900E5CA16 /* QuartzCore.framework */; };
+		F396C9411BD43D8300E5CA16 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9401BD43D8300E5CA16 /* Security.framework */; };
+		F396C9441BD43D9000E5CA16 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9421BD43D9000E5CA16 /* StoreKit.framework */; };
+		F396C9451BD43D9000E5CA16 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9431BD43D9000E5CA16 /* SystemConfiguration.framework */; };
+		F396C9471BD43DA000E5CA16 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9461BD43DA000E5CA16 /* libz.tbd */; };
+		F396C9491BD43DBE00E5CA16 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9481BD43DBE00E5CA16 /* libsqlite3.tbd */; };
+		F3A0FE431BD43EF80075D795 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A0FE421BD43EF80075D795 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		F3A0FE461BD467560075D795 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A0FE451BD467560075D795 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A74B1BC198B500686068 /* AppDelegate.swift */; };
 		F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A74D1BC198B500686068 /* ViewController.swift */; };
 		F3D8A7511BC198B500686068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A74F1BC198B500686068 /* Main.storyboard */; };
@@ -37,6 +52,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F396C9301BD4245E00E5CA16 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F396C9321BD43CF300E5CA16 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		F396C9331BD43CF300E5CA16 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F396C9361BD43D4500E5CA16 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F396C9381BD43D4B00E5CA16 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F396C93A1BD43D5600E5CA16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F396C93C1BD43D5D00E5CA16 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F396C93E1BD43D7900E5CA16 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F396C9401BD43D8300E5CA16 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F396C9421BD43D9000E5CA16 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F396C9431BD43D9000E5CA16 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F396C9461BD43DA000E5CA16 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F396C9481BD43DBE00E5CA16 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F3A0FE421BD43EF80075D795 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F3A0FE451BD467560075D795 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F3D8A7481BC198B500686068 /* Virtual Classroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Classroom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D8A74B1BC198B500686068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3D8A74D1BC198B500686068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +90,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F396C9491BD43DBE00E5CA16 /* libsqlite3.tbd in Frameworks */,
+				F396C9471BD43DA000E5CA16 /* libz.tbd in Frameworks */,
+				F396C9441BD43D9000E5CA16 /* StoreKit.framework in Frameworks */,
+				F396C9451BD43D9000E5CA16 /* SystemConfiguration.framework in Frameworks */,
+				F396C9411BD43D8300E5CA16 /* Security.framework in Frameworks */,
+				F396C93F1BD43D7900E5CA16 /* QuartzCore.framework in Frameworks */,
+				F3A0FE431BD43EF80075D795 /* Parse.framework in Frameworks */,
+				F396C93D1BD43D5D00E5CA16 /* CoreLocation.framework in Frameworks */,
+				F396C93B1BD43D5600E5CA16 /* CoreGraphics.framework in Frameworks */,
+				F396C9391BD43D4B00E5CA16 /* CFNetwork.framework in Frameworks */,
+				F396C9371BD43D4500E5CA16 /* AudioToolbox.framework in Frameworks */,
+				F396C9341BD43CF300E5CA16 /* ParseUI.framework in Frameworks */,
+				F396C9351BD43CF300E5CA16 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,10 +123,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3A0FE441BD43F2F0075D795 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F396C9481BD43DBE00E5CA16 /* libsqlite3.tbd */,
+				F396C9461BD43DA000E5CA16 /* libz.tbd */,
+				F3A0FE421BD43EF80075D795 /* Parse.framework */,
+				F396C9421BD43D9000E5CA16 /* StoreKit.framework */,
+				F396C9431BD43D9000E5CA16 /* SystemConfiguration.framework */,
+				F396C9401BD43D8300E5CA16 /* Security.framework */,
+				F396C93E1BD43D7900E5CA16 /* QuartzCore.framework */,
+				F396C93C1BD43D5D00E5CA16 /* CoreLocation.framework */,
+				F396C93A1BD43D5600E5CA16 /* CoreGraphics.framework */,
+				F396C9381BD43D4B00E5CA16 /* CFNetwork.framework */,
+				F396C9361BD43D4500E5CA16 /* AudioToolbox.framework */,
+				F396C9321BD43CF300E5CA16 /* ParseUI.framework */,
+				F396C9331BD43CF300E5CA16 /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F3D8A73F1BC198B400686068 = {
 			isa = PBXGroup;
 			children = (
 				F3D8A74A1BC198B500686068 /* Virtual Classroom */,
+				F3A0FE441BD43F2F0075D795 /* Frameworks */,
 				F3D8A7621BC198B500686068 /* Virtual ClassroomTests */,
 				F3D8A76D1BC198B500686068 /* Virtual ClassroomUITests */,
 				F3D8A7491BC198B500686068 /* Products */,
@@ -106,6 +170,8 @@
 				F3D8A74B1BC198B500686068 /* AppDelegate.swift */,
 				F3D8A74D1BC198B500686068 /* ViewController.swift */,
 				F3D8A74F1BC198B500686068 /* Main.storyboard */,
+				F3A0FE451BD467560075D795 /* RegisterViewController.swift */,
+				F396C9301BD4245E00E5CA16 /* LoginViewController.swift */,
 				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
 				F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */,
 				F3D8A7551BC198B500686068 /* Assets.xcassets */,
@@ -268,6 +334,8 @@
 				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
 				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
+				F3A0FE461BD467560075D795 /* RegisterViewController.swift in Sources */,
+				F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */,
 				F3D8A7541BC198B500686068 /* Virtual_Classroom.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +476,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Virtual Classroom/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-Classroom";
@@ -419,6 +491,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Virtual Classroom/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bender.Joseph.Virtual-Classroom";
