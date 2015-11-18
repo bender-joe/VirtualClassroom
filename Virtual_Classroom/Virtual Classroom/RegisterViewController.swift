@@ -108,7 +108,7 @@ class RegisterViewController : UIViewController, UITextFieldDelegate{
         } else{
             errorMessage = "Please Try Again"
             // got good input here lets create the user
-            var user = PFUser()
+            let user = PFUser()
             user.username = emailAddress.text
             user.password = password.text
             user["firstname"] = firstName.text!
@@ -146,7 +146,7 @@ class RegisterViewController : UIViewController, UITextFieldDelegate{
     }
     
     // function takes a text field and which must be there and returns boolean
-    func textFieldShouldReturn(textField : UITextField!) -> Bool {
+    func textFieldShouldReturn(textField : UITextField) -> Bool {
         
         textField.resignFirstResponder()
         

@@ -25,6 +25,9 @@ class LoginViewController: ViewController {
     }
     
     @IBAction func login(sender: AnyObject) {
+        print(username.text)
+        print(password.text)
+        // Check if the input fields are empty.. display alert
         if username.text == "" || password.text == ""{
             DisplayAlert("Login Failed", message: "Please enter a username and password.")
         } else {
@@ -32,7 +35,13 @@ class LoginViewController: ViewController {
             
             PFUser.logInWithUsernameInBackground(username.text!, password: password.text!, block: { (user, error) -> Void in
                 if user != nil {
-                    // logged in
+                    // logged in 
+                    // here we need to segue over to the courses home page
+                    
+                    self.performSegueWithIdentifier("login", sender: self)
+                    
+                    
+                    
                 } else {
                     var errorMessage = ""
                     if let errorString = error!.userInfo["error"] as? String{

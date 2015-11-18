@@ -45,7 +45,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sxX-oW-nFI"/>
-                                    <segue destination="p2e-9I-zaD" kind="showDetail" id="SAd-tL-FST"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvK-zS-wD1">
@@ -130,6 +129,7 @@
                     <connections>
                         <outlet property="password" destination="ZJw-1K-zie" id="KkV-Nb-cXn"/>
                         <outlet property="username" destination="anZ-32-8jw" id="twc-h6-aND"/>
+                        <segue destination="p2e-9I-zaD" kind="show" identifier="login" id="E8O-Wm-P0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1112,7 +1112,7 @@ Must contain at least uppercase letter</string>
         <image name="App_Backgorund.jpg" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mC3-94-Qt1"/>
+        <segue reference="E8O-Wm-P0J"/>
         <segue reference="zO2-mT-egJ"/>
     </inferredMetricsTieBreakers>
 </document>
