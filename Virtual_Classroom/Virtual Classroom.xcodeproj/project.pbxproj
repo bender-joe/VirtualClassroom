@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F323960B1BFD0321002D9CC3 /* InstViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F32396161BFD2038002D9CC3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32396151BFD2038002D9CC3 /* SearchVC.swift */; settings = {ASSET_TAGS = (); }; };
 		F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396C9301BD4245E00E5CA16 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F396C9341BD43CF300E5CA16 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9321BD43CF300E5CA16 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
 		F396C9351BD43CF300E5CA16 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9331BD43CF300E5CA16 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		F323960B1BFD0321002D9CC3 /* InstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstViewController.swift; sourceTree = "<group>"; };
+		F32396151BFD2038002D9CC3 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		F396C9301BD4245E00E5CA16 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F396C9321BD43CF300E5CA16 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		F396C9331BD43CF300E5CA16 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				F323960B1BFD0321002D9CC3 /* InstViewController.swift */,
 				F396C9301BD4245E00E5CA16 /* LoginViewController.swift */,
 				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
+				F32396151BFD2038002D9CC3 /* SearchVC.swift */,
 				F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */,
 				F3D8A7551BC198B500686068 /* Assets.xcassets */,
 				F3D8A7571BC198B500686068 /* LaunchScreen.storyboard */,
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32396161BFD2038002D9CC3 /* SearchVC.swift in Sources */,
 				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
 				F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */,
