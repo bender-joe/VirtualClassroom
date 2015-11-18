@@ -129,7 +129,8 @@
                     <connections>
                         <outlet property="password" destination="ZJw-1K-zie" id="KkV-Nb-cXn"/>
                         <outlet property="username" destination="anZ-32-8jw" id="twc-h6-aND"/>
-                        <segue destination="p2e-9I-zaD" kind="show" identifier="login" id="E8O-Wm-P0J"/>
+                        <segue destination="p2e-9I-zaD" kind="show" identifier="login_student" id="miy-Xz-1ek"/>
+                        <segue destination="C8i-eV-c3V" kind="show" identifier="login_inst" id="6Gg-PE-gQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -427,6 +428,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bN2-B9-yjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776.5" y="-99.5"/>
+        </scene>
+        <!--Inst View Controller-->
+        <scene sceneID="2pI-Pz-DPG">
+            <objects>
+                <viewController id="C8i-eV-c3V" customClass="InstViewController" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LXM-5e-AvN"/>
+                        <viewControllerLayoutGuide type="bottom" id="NFx-g3-AXr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qd3-9w-PRg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cob-Hd-HKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122.5" y="-842.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IHj-XP-51n">
@@ -1112,7 +1132,7 @@ Must contain at least uppercase letter</string>
         <image name="App_Backgorund.jpg" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E8O-Wm-P0J"/>
+        <segue reference="miy-Xz-1ek"/>
         <segue reference="zO2-mT-egJ"/>
     </inferredMetricsTieBreakers>
 </document>

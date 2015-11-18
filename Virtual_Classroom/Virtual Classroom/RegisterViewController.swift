@@ -114,6 +114,7 @@ class RegisterViewController : UIViewController, UITextFieldDelegate{
             user["firstname"] = firstName.text!
             user["lastname"] = lastName.text!
             user["school"] = school.text!
+            user["userType"] = "stud"
             
             
             user.signUpInBackgroundWithBlock({ (success, error) -> Void in

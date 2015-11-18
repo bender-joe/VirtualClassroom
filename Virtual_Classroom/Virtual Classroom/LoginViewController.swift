@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LoginViewController: ViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet var username: UITextField!
     
@@ -24,24 +24,46 @@ class LoginViewController: ViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    // Function to Login and segue to the correct view if user is instructor or student
     @IBAction func login(sender: AnyObject) {
         print(username.text)
         print(password.text)
+        var userType = ""
         // Check if the input fields are empty.. display alert
         if username.text == "" || password.text == ""{
             DisplayAlert("Login Failed", message: "Please enter a username and password.")
         } else {
+            // need to try to query
+            var query = PFUser.query()
+            // Var to hold the user type
+            // query where the username is equal to the current user name that is trying to be logged in
+            query!.whereKey("username", equalTo: self.username.text!)
+            // method to get the objects from the query, return a PFObjects Array
+            query!.findObjectsInBackgroundWithBlock {
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                // this query will always succeed because the login function checks for valid user names
+                print("Successfully retrieved \(objects!.count) userType.")
+                // Go get the usertype from the query
+                let objects = objects as [PFObject]!
+                // Objects is an Array of returned items... Should only have one!
+                // I just wan to access the first element and get the userType
+                userType = objects[0]["userType"] as! String
+                print(userType)
+            }
 
-            
             PFUser.logInWithUsernameInBackground(username.text!, password: password.text!, block: { (user, error) -> Void in
                 if user != nil {
-                    // logged in 
-                    // here we need to segue over to the courses home page
+                    // logged in
+                    // query the database to check the userType
                     
-                    self.performSegueWithIdentifier("login", sender: self)
-                    
-                    
-                    
+                    // if the user type is inst, go to the create course page
+                    if(userType == "inst"){
+                        self.performSegueWithIdentifier("login_inst", sender: self)
+                    }
+                    // If user is of type stud we need to segue over to the courses home page
+                    if(userType == "stud"){
+                        self.performSegueWithIdentifier("login_student", sender: self)
+                    }
                 } else {
                     var errorMessage = ""
                     if let errorString = error!.userInfo["error"] as? String{

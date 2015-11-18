@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F323960B1BFD0321002D9CC3 /* InstViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396C9301BD4245E00E5CA16 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F396C9341BD43CF300E5CA16 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9321BD43CF300E5CA16 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
 		F396C9351BD43CF300E5CA16 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396C9331BD43CF300E5CA16 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F323960B1BFD0321002D9CC3 /* InstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstViewController.swift; sourceTree = "<group>"; };
 		F396C9301BD4245E00E5CA16 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F396C9321BD43CF300E5CA16 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		F396C9331BD43CF300E5CA16 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				F3D8A74D1BC198B500686068 /* ViewController.swift */,
 				F3D8A74F1BC198B500686068 /* Main.storyboard */,
 				F3A0FE451BD467560075D795 /* RegisterViewController.swift */,
+				F323960B1BFD0321002D9CC3 /* InstViewController.swift */,
 				F396C9301BD4245E00E5CA16 /* LoginViewController.swift */,
 				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
 				F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */,
@@ -333,6 +336,7 @@
 			files = (
 				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
+				F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */,
 				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
 				F3A0FE461BD467560075D795 /* RegisterViewController.swift in Sources */,
 				F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */,
