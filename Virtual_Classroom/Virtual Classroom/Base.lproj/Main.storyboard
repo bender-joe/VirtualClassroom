@@ -832,7 +832,6 @@
                                     <barButtonItem title="Enroll" id="HKb-gY-yjV">
                                         <connections>
                                             <action selector="EnrollButton:" destination="AEh-NA-wam" id="9XJ-nr-sIp"/>
-                                            <segue destination="p2e-9I-zaD" kind="showDetail" id="mC3-94-Qt1"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
