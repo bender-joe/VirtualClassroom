@@ -218,6 +218,7 @@
                             <constraint firstItem="HNw-2F-s2S" firstAttribute="top" secondItem="w7F-88-eTV" secondAttribute="bottom" id="z5R-4m-odd"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciA-qy-P5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -713,7 +714,6 @@
         <!--SearchVC-->
         <scene sceneID="QU5-F2-fjV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sRT-4Y-7kY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="AEh-NA-wam" customClass="SearchVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="khv-pk-Lnr"/>
@@ -825,7 +825,7 @@
                                 <items>
                                     <barButtonItem title="Go Back" id="eyM-li-bq6">
                                         <connections>
-                                            <segue destination="p2e-9I-zaD" kind="showDetail" id="PIA-8c-YnF"/>
+                                            <segue destination="p2e-9I-zaD" kind="showDetail" identifier="courses_home" id="PIA-8c-YnF"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Yl5-yY-4ar"/>
@@ -877,6 +877,7 @@
                         <outlet property="resultsTable" destination="QY3-9e-1rU" id="vvc-AG-dmp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRT-4Y-7kY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2244.5" y="-22.5"/>
         </scene>

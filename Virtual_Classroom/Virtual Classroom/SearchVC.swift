@@ -33,7 +33,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // search by course number - query course table for number
         if(number != ""){
-            var query = PFQuery(className:"Course")
+            let query = PFQuery(className:"Course")
             query.whereKey("courseNumber", equalTo: number)
             query.findObjectsInBackgroundWithBlock {
                 (objects, error) -> Void in
@@ -68,7 +68,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // Search by prefix
         if(prefix != ""){
-            var query = PFQuery(className:"Course")
+            let query = PFQuery(className:"Course")
             query.whereKey("coursePrefix", equalTo: prefix)
             query.findObjectsInBackgroundWithBlock {
                 (objects: [PFObject]?, error: NSError?) -> Void in
@@ -112,20 +112,20 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             print("enrolling "+(PFUser.currentUser()?.objectId)!+" "+selectedCourseID)
             // before insert into enrolling check if student is enrolled
-            var query = PFQuery(className: "Enrolled_In")
+            let query = PFQuery(className: "Enrolled_In")
             query.whereKey("User", equalTo: PFUser.currentUser()!.objectId!)
             query.whereKey("Course", equalTo: selectedCourseID)
             
-            query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
-                if let objects
-                // check enrolled_in and see if they are enrolled in the DB...
-            })
+//            query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+//                if let objects
+//                // check enrolled_in and see if they are enrolled in the DB...
+//            }) 
             
             
             enrolling["User"] = PFUser.currentUser()
             enrolling["Course"] = PFObject(withoutDataWithClassName: "Course", objectId: selectedCourseID)
             enrolling.saveInBackground()
-//            performSegueWithIdentifier("done_enrolling", sender: nil)
+            performSegueWithIdentifier("courses_home", sender: nil)
         }
         
     }
