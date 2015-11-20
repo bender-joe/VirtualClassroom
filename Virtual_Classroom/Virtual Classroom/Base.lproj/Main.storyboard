@@ -174,16 +174,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="Cell" id="o8C-Dr-olJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" editingAccessoryType="disclosureIndicator" textLabel="LJc-kv-mDj" style="IBUITableViewCellStyleDefault" id="o8C-Dr-olJ">
                                         <rect key="frame" x="0.0" y="28" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8C-Dr-olJ" id="Z4m-Jt-lDn">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LJc-kv-mDj">
+                                                    <rect key="frame" x="15" y="0.0" width="333" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="5y1-gL-1qI" kind="showDetail" id="gLW-C0-os9"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -222,6 +228,7 @@
                     <connections>
                         <outlet property="coursesTable" destination="w7F-88-eTV" id="maH-zV-bnl"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="HIK-4u-Zpa"/>
+                        <segue destination="5y1-gL-1qI" kind="show" identifier="segueToCourse" id="8aa-VT-3Fp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciA-qy-P5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -453,10 +460,10 @@
             </objects>
             <point key="canvasLocation" x="1122.5" y="-842.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Course View Controller-->
         <scene sceneID="IHj-XP-51n">
             <objects>
-                <viewController id="5y1-gL-1qI" sceneMemberID="viewController">
+                <viewController id="5y1-gL-1qI" customClass="CourseViewController" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b6A-1Q-wOT"/>
                         <viewControllerLayoutGuide type="bottom" id="t4V-Ix-x1H"/>
@@ -1121,7 +1128,7 @@ Must contain at least uppercase letter</string>
         <image name="App_Backgorund.jpg" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="miy-Xz-1ek"/>
+        <segue reference="sB9-jj-NgC"/>
         <segue reference="HIK-4u-Zpa"/>
     </inferredMetricsTieBreakers>
 </document>

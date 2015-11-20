@@ -15,6 +15,8 @@ class CourseHomeViewController: UIViewController, UITableViewDelegate, UITableVi
     var userEnrolledCourses = [String]()
     var userEnrolledCourseIDs = [String]()
     var coursesTest = ["Testing"]
+    var lastSelectedIndexPath : NSIndexPath?
+
 
     @IBAction func logoutButton(sender: AnyObject) {
         var user = PFUser.currentUser()
@@ -63,11 +65,12 @@ class CourseHomeViewController: UIViewController, UITableViewDelegate, UITableVi
     }
         
     
-    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        print(courseIDs[indexPath.row])
-//        
-//        }
+    // This is used when the user selects a course... need to perform a segue to the course page
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("User going to view course \(userEnrolledCourseIDs[indexPath.row])")
+        
+        
+    }
     
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
@@ -81,8 +84,22 @@ class CourseHomeViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell  = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
         cell.textLabel?.text = userEnrolledCourses[indexPath.row]
-        
+        cell.accessoryType = .DisclosureIndicator
         return cell
+    }
+    
+    // Function to help control the keyboard views
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.view.endEditing(true)
+    }
+    
+    // function takes a text field and which must be there and returns boolean
+    func textFieldShouldReturn(textField : UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     override func didReceiveMemoryWarning() {

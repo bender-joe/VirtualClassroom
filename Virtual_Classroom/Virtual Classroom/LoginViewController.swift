@@ -76,7 +76,19 @@ class LoginViewController: UIViewController {
         
     }
     
+    // Function to help control the keyboard views
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.view.endEditing(true)
+    }
     
+    // function takes a text field and which must be there and returns boolean
+    func textFieldShouldReturn(textField : UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
     @IBAction func register(sender: AnyObject) {
     }
 

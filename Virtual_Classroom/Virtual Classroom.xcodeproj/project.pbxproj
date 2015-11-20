@@ -34,6 +34,7 @@
 		F3D8A76F1BC198B500686068 /* Virtual_ClassroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A76E1BC198B500686068 /* Virtual_ClassroomUITests.swift */; };
 		F3D8A77D1BC1A0E800686068 /* App_Backgorund.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */; settings = {ASSET_TAGS = (); }; };
 		F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FDC1BFEE032008A7E5C /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		F3D8A7701BC198B500686068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = App_Backgorund.jpg; sourceTree = "<group>"; };
 		F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseHomeViewController.swift; sourceTree = "<group>"; };
+		F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				F323960B1BFD0321002D9CC3 /* InstViewController.swift */,
 				F396C9301BD4245E00E5CA16 /* LoginViewController.swift */,
 				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
+				F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */,
 				F32396151BFD2038002D9CC3 /* SearchVC.swift */,
 				F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */,
 				F3D8A7551BC198B500686068 /* Assets.xcassets */,
@@ -339,6 +342,7 @@
 			files = (
 				F32396161BFD2038002D9CC3 /* SearchVC.swift in Sources */,
 				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
+				F3DC0FDC1BFEE032008A7E5C /* CourseViewController.swift in Sources */,
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
 				F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */,
 				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
