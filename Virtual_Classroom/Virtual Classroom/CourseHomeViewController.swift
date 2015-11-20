@@ -21,7 +21,6 @@ class CourseHomeViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
         return courseExamples.count
         //comment
-    
     }
     
     // This function will need DB calls to get the courses for the user, and load their information

@@ -26,6 +26,9 @@ class LoginViewController: UIViewController {
     
     // Function to Login and segue to the correct view if user is instructor or student
     @IBAction func login(sender: AnyObject) {
+        //this is to attempt to solve a parse bug that occurs for the invalid session token error
+        PFUser.logOut()
+            
         print(username.text)
         print(password.text)
         var userType = ""
@@ -34,7 +37,7 @@ class LoginViewController: UIViewController {
             DisplayAlert("Login Failed", message: "Please enter a username and password.")
         } else {
             // need to try to query
-            var query = PFUser.query()
+            let query = PFUser.query()
             // Var to hold the user type
             // query where the username is equal to the current user name that is trying to be logged in
             query!.whereKey("username", equalTo: self.username.text!)
