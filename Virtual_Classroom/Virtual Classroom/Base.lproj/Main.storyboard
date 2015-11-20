@@ -197,6 +197,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XND-mx-abw"/>
                                     <barButtonItem title="Logout" id="OL5-ov-zrj">
                                         <connections>
+                                            <action selector="logoutButton:" destination="p2e-9I-zaD" id="pv2-EX-XUb"/>
                                             <segue destination="BYZ-38-t0r" kind="showDetail" id="7Uo-Sb-Dus"/>
                                         </connections>
                                     </barButtonItem>
@@ -219,10 +220,13 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="coursesTable" destination="w7F-88-eTV" id="maH-zV-bnl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciA-qy-P5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289.5" y="-22.5"/>
+            <point key="canvasLocation" x="1267.5" y="-73.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mx8-Lf-1Du">
@@ -474,7 +478,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46q-gt-qSj">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Course Title" id="Odq-mp-PJM"/>
+                                    <navigationItem title="COP 4331C" id="Odq-mp-PJM"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z7k-zt-yh1">
@@ -498,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOE-Dx-Iyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783.5" y="-790.5"/>
+            <point key="canvasLocation" x="1767.5" y="-882.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wy2-f9-jUe">
@@ -656,8 +660,8 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BJL-Cu-DP8"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Backgorund.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-g2-AzU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1136"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="App_Backgorund.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-g2-AzU">
+                                <rect key="frame" x="0.0" y="21" width="375" height="1136"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -709,7 +713,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uZ-Lf-pvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.5" y="-34.5"/>
+            <point key="canvasLocation" x="1844.5" y="-142.5"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="QU5-F2-fjV">
@@ -1117,7 +1121,7 @@ Must contain at least uppercase letter</string>
         <image name="App_Backgorund.jpg" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PIA-8c-YnF"/>
+        <segue reference="sB9-jj-NgC"/>
         <segue reference="7Uo-Sb-Dus"/>
     </inferredMetricsTieBreakers>
 </document>
