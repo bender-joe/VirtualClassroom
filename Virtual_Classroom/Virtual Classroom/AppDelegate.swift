@@ -7,9 +7,15 @@
 //
 
 import UIKit
+<<<<<<< Updated upstream
 import Bolts
 import Parse
 //import CoreData
+=======
+import CoreData
+import Parse
+import Bolts
+>>>>>>> Stashed changes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,11 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+<<<<<<< Updated upstream
+=======
+        // Override point for customization after application launch.
+        
+>>>>>>> Stashed changes
         // [Optional] Power your app with Local Datastore. For more info, go to
         // https://parse.com/docs/ios_guide#localdatastore/iOS
         Parse.enableLocalDatastore()
         
+<<<<<<< Updated upstream
         // Initialize Parse.
+=======
+>>>>>>> Stashed changes
         Parse.setApplicationId("LBTlOCwApDCeSyoavQN4gLOVgBMWTd2GFr3j5ZRR",
             clientKey: "L7YWe4TpferpK1rgqFf2XOSWfG1sv7g0BcSds7cL")
         
