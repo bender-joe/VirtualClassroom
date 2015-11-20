@@ -9,13 +9,24 @@
 import Parse
 import UIKit
 
+//struct myGlobals {
+    //var associatedCourses: [String] = ["test"]
+//}
+
 class InstViewController : UIViewController, UITextFieldDelegate {
     
-    var associatedCourses = [String]()
+    var assocCourses: [String] = []
+    
+    @IBOutlet var tableViewOutlet: UITableView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         getAssociatedCourses()
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.tableViewOutlet.reloadData()
+        super.viewDidAppear(true)
     }
     
     func getAssociatedCourses () {
@@ -53,28 +64,31 @@ class InstViewController : UIViewController, UITextFieldDelegate {
                                 let coursePrefix = singleCourse?.valueForKey("coursePrefix") as! String
                                 let courseNumber = singleCourse?.valueForKey("courseNumber") as! String
                                 print(coursePrefix, courseNumber)
-                                self.associatedCourses.append(coursePrefix + courseNumber)
+                                self.assocCourses.append(coursePrefix + courseNumber)
+                                print(self.assocCourses)
+                                //self.tableView.reloadData()
                             } else {
                                 print("Error retrieving singleCourse")
                             }
                         }
                     }
                     
-                    //THIS IS WHERE YOU STOPPED: TEST THAT THE ARRAY IS POPULATED CORRECTLY AND FIGURE OUT WHY THE ELEMENTS ARE NOT BEING PRINTED IN EACH CELL
-                    print(self.associatedCourses)
-                    
                 } else {
                     // Log details of the failure
                     print("Error: \(error!) \(error!.userInfo)")
                 }
             }
+        
         }
-
+        
+        
+        //Log the contents of associated courses
+        print(self.assocCourses)
     }
     
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
-        return self.associatedCourses.count
+        return self.assocCourses.count
     }
     
     // This function will need DB calls to get the courses for the user, and load their information
@@ -83,7 +97,7 @@ class InstViewController : UIViewController, UITextFieldDelegate {
         
         //getAssociatedCourses()
         
-        cell.textLabel?.text = self.associatedCourses[indexPath.row]
+        cell.textLabel?.text = self.assocCourses[indexPath.row]
         
         return cell
     }

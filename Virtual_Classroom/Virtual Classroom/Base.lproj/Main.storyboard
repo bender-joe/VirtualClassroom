@@ -430,6 +430,99 @@
             </objects>
             <point key="canvasLocation" x="776.5" y="-99.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="C1b-q9-tOr">
+            <objects>
+                <viewController id="XQ8-3q-p45" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rso-zQ-WHz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kaz-Mm-5Cx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A0b-eU-89F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Backgorund.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AAE-G4-NvE">
+                                <rect key="frame" x="0.0" y="35" width="375" height="632"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course Prefix" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOk-fZ-pZA">
+                                <rect key="frame" x="85" y="194" width="204" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="DF8-w7-tDg"/>
+                                    <constraint firstAttribute="height" constant="30" id="hI1-Gw-Q1d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Coures Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gow-MC-UO7">
+                                <rect key="frame" x="85" y="237" width="204" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8Cc-XR-klV"/>
+                                    <constraint firstAttribute="width" constant="204" id="8p2-Aj-T02"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course Start Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOB-NP-7we">
+                                <rect key="frame" x="85" y="280" width="204" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5fW-kH-qT2"/>
+                                    <constraint firstAttribute="width" constant="204" id="tPV-g5-7Ay"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter Course Information:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAL-rs-Yij">
+                                <rect key="frame" x="85" y="146" width="204" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="8mM-DS-Xzj"/>
+                                    <constraint firstAttribute="width" constant="204" id="hC6-Eh-gXv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-8S-iCy">
+                                <rect key="frame" x="85" y="76" width="204" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="Fj8-G0-dbg"/>
+                                    <constraint firstAttribute="height" constant="39" id="JZF-dk-SuO"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Create A Course">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course End Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAM-PU-dp3">
+                                <rect key="frame" x="85" y="324" width="204" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="dtI-18-QKl"/>
+                                    <constraint firstAttribute="height" constant="30" id="pfT-7Q-oWP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AAE-G4-NvE" secondAttribute="trailing" id="OTr-GW-d0A"/>
+                            <constraint firstItem="AAE-G4-NvE" firstAttribute="leading" secondItem="A0b-eU-89F" secondAttribute="leading" id="X6a-af-k91"/>
+                            <constraint firstItem="Kaz-Mm-5Cx" firstAttribute="top" secondItem="AAE-G4-NvE" secondAttribute="bottom" id="gMG-Fe-OKV"/>
+                            <constraint firstItem="AAE-G4-NvE" firstAttribute="top" secondItem="Rso-zQ-WHz" secondAttribute="bottom" constant="15" id="nxR-e3-dHI"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngG-4T-xtP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596.5" y="-842.5"/>
+        </scene>
         <!--Inst View Controller-->
         <scene sceneID="2pI-Pz-DPG">
             <objects>
@@ -511,6 +604,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="Iup-LI-p7r" id="X3X-LD-2rq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cob-Hd-HKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
