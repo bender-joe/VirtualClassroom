@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.5" y="749.5"/>
+            <point key="canvasLocation" x="767.5" y="737.5"/>
         </scene>
         <!--Course Home View Controller-->
         <scene sceneID="g2H-An-Yel">
@@ -198,7 +198,6 @@
                                     <barButtonItem title="Logout" id="OL5-ov-zrj">
                                         <connections>
                                             <action selector="logoutButton:" destination="p2e-9I-zaD" id="pv2-EX-XUb"/>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="7Uo-Sb-Dus"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -222,6 +221,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="coursesTable" destination="w7F-88-eTV" id="maH-zV-bnl"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="HIK-4u-Zpa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciA-qy-P5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1121,7 +1121,7 @@ Must contain at least uppercase letter</string>
         <image name="App_Backgorund.jpg" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sB9-jj-NgC"/>
-        <segue reference="7Uo-Sb-Dus"/>
+        <segue reference="miy-Xz-1ek"/>
+        <segue reference="HIK-4u-Zpa"/>
     </inferredMetricsTieBreakers>
 </document>

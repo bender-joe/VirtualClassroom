@@ -17,7 +17,15 @@ class CourseHomeViewController: UIViewController, UITableViewDelegate, UITableVi
     var coursesTest = ["Testing"]
 
     @IBAction func logoutButton(sender: AnyObject) {
-        
+        var user = PFUser.currentUser()
+        print("logging out user \(user)")
+        PFUser.logOut()
+        user = PFUser.currentUser()
+        print("trying to logout user")
+        if(user == nil){
+            print("\(user) is now logged out... going back to login screen")
+            performSegueWithIdentifier("logout", sender: nil)
+        }
     }
     let user = PFUser.currentUser()
     override func viewDidLoad() {
