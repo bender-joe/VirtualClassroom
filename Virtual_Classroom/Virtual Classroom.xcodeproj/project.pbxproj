@@ -36,6 +36,12 @@
 		F3D8A76F1BC198B500686068 /* Virtual_ClassroomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A76E1BC198B500686068 /* Virtual_ClassroomUITests.swift */; };
 		F3D8A77D1BC1A0E800686068 /* App_Backgorund.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */; settings = {ASSET_TAGS = (); }; };
 		F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FDC1BFEE032008A7E5C /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FDE1C005B65008A7E5C /* FilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FDD1C005B65008A7E5C /* FilesVC.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FE01C0061C4008A7E5C /* DiscussionsHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FDF1C0061C4008A7E5C /* DiscussionsHomeVC.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FE21C0072C3008A7E5C /* NewDiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FE11C0072C3008A7E5C /* NewDiscussionVC.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FE41C00736A008A7E5C /* DiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FE31C00736A008A7E5C /* DiscussionVC.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FE61C0073D9008A7E5C /* NewCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FE51C0073D9008A7E5C /* NewCommentVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,12 @@
 		F3D8A7701BC198B500686068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = App_Backgorund.jpg; sourceTree = "<group>"; };
 		F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseHomeViewController.swift; sourceTree = "<group>"; };
+		F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		F3DC0FDD1C005B65008A7E5C /* FilesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesVC.swift; sourceTree = "<group>"; };
+		F3DC0FDF1C0061C4008A7E5C /* DiscussionsHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionsHomeVC.swift; sourceTree = "<group>"; };
+		F3DC0FE11C0072C3008A7E5C /* NewDiscussionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDiscussionVC.swift; sourceTree = "<group>"; };
+		F3DC0FE31C00736A008A7E5C /* DiscussionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionVC.swift; sourceTree = "<group>"; };
+		F3DC0FE51C0073D9008A7E5C /* NewCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +196,7 @@
 				F323960B1BFD0321002D9CC3 /* InstViewController.swift */,
 				F396C9301BD4245E00E5CA16 /* LoginViewController.swift */,
 				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
+				F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */,
 				F32396151BFD2038002D9CC3 /* SearchVC.swift */,
 				F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */,
 				F3D8A7551BC198B500686068 /* Assets.xcassets */,
@@ -346,13 +359,18 @@
 				0245AB7C1BFFEFFF0089B089 /* CreateCourse.swift in Sources */,
 				F32396161BFD2038002D9CC3 /* SearchVC.swift in Sources */,
 				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
+				F3DC0FDC1BFEE032008A7E5C /* CourseViewController.swift in Sources */,
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
 				0245AB7E1C0028310089B089 /* CourseGrades.swift in Sources */,
 				F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */,
 				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
+				F3DC0FE41C00736A008A7E5C /* DiscussionVC.swift in Sources */,
+				F3DC0FDE1C005B65008A7E5C /* FilesVC.swift in Sources */,
 				F3A0FE461BD467560075D795 /* RegisterViewController.swift in Sources */,
 				F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */,
+				F3DC0FE61C0073D9008A7E5C /* NewCommentVC.swift in Sources */,
 				F3D8A7541BC198B500686068 /* Virtual_Classroom.xcdatamodeld in Sources */,
+				F3DC0FE21C0072C3008A7E5C /* NewDiscussionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

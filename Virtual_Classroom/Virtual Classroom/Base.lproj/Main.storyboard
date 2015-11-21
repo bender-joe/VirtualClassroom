@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.5" y="749.5"/>
+            <point key="canvasLocation" x="767.5" y="737.5"/>
         </scene>
         <!--Course Home View Controller-->
         <scene sceneID="g2H-An-Yel">
@@ -174,16 +174,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="Cell" id="o8C-Dr-olJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" editingAccessoryType="disclosureIndicator" textLabel="LJc-kv-mDj" style="IBUITableViewCellStyleDefault" id="o8C-Dr-olJ">
                                         <rect key="frame" x="0.0" y="28" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8C-Dr-olJ" id="Z4m-Jt-lDn">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LJc-kv-mDj">
+                                                    <rect key="frame" x="15" y="0.0" width="333" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="5y1-gL-1qI" kind="showDetail" id="gLW-C0-os9"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -197,7 +203,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XND-mx-abw"/>
                                     <barButtonItem title="Logout" id="OL5-ov-zrj">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="7Uo-Sb-Dus"/>
+                                            <action selector="logoutButton:" destination="p2e-9I-zaD" id="pv2-EX-XUb"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -219,10 +225,15 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="coursesTable" destination="w7F-88-eTV" id="maH-zV-bnl"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="HIK-4u-Zpa"/>
+                        <segue destination="5y1-gL-1qI" kind="show" identifier="segueToCourse" id="8aa-VT-3Fp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciA-qy-P5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289.5" y="-22.5"/>
+            <point key="canvasLocation" x="1267.5" y="-73.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mx8-Lf-1Du">
@@ -785,10 +796,10 @@
             </objects>
             <point key="canvasLocation" x="1126.5" y="-842.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Course View Controller-->
         <scene sceneID="IHj-XP-51n">
             <objects>
-                <viewController id="5y1-gL-1qI" sceneMemberID="viewController">
+                <viewController id="5y1-gL-1qI" customClass="CourseViewController" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b6A-1Q-wOT"/>
                         <viewControllerLayoutGuide type="bottom" id="t4V-Ix-x1H"/>
@@ -802,6 +813,7 @@
                                 <items>
                                     <barButtonItem title="Go Back" id="oDJ-jq-5gB">
                                         <connections>
+                                            <action selector="goBackButton:" destination="5y1-gL-1qI" id="4aJ-zy-h2Y"/>
                                             <segue destination="p2e-9I-zaD" kind="showDetail" id="sB9-jj-NgC"/>
                                         </connections>
                                     </barButtonItem>
@@ -809,32 +821,48 @@
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46q-gt-qSj">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Course Title" id="Odq-mp-PJM"/>
+                                    <navigationItem title="Some Title" id="Odq-mp-PJM"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z7k-zt-yh1">
                                 <rect key="frame" x="0.0" y="72" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4od-vA-dZY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="4od-vA-dZY">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4od-vA-dZY" id="Qro-Oc-9Ne">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100.0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOT-Q3-Odb">
+                                <rect key="frame" x="276" y="39" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="coureTitleField" destination="Odq-mp-PJM" id="Ubh-rv-bBK"/>
+                        <outlet property="courseGrade" destination="yOT-Q3-Odb" id="08H-7D-ePw"/>
+                        <outlet property="courseOptionsTable" destination="z7k-zt-yh1" id="GGY-DE-hAW"/>
+                        <segue destination="amR-RP-sI6" kind="show" identifier="coursefiles" id="c4S-wK-Mv4"/>
+                        <segue destination="RvS-Pu-gKX" kind="show" identifier="coursediscussions" id="tcz-Eu-Rvd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOE-Dx-Iyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783.5" y="-790.5"/>
+            <point key="canvasLocation" x="1767.5" y="-882.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wy2-f9-jUe">
@@ -992,8 +1020,8 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BJL-Cu-DP8"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Backgorund.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-g2-AzU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1136"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="App_Backgorund.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-g2-AzU">
+                                <rect key="frame" x="0.0" y="21" width="375" height="1136"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1045,7 +1073,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uZ-Lf-pvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.5" y="-34.5"/>
+            <point key="canvasLocation" x="1844.5" y="-142.5"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="QU5-F2-fjV">
@@ -1447,6 +1475,371 @@ Must contain at least uppercase letter</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcc-98-CAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1402" y="750"/>
+        </scene>
+        <!--FilesVC-->
+        <scene sceneID="Jsy-tm-rgt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5x-ue-VJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="amR-RP-sI6" customClass="FilesVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ILX-aL-cp2"/>
+                        <viewControllerLayoutGuide type="bottom" id="OnT-Au-3bF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qwS-C3-u05">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDd-cN-OUD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Go Back" id="6NI-f0-43B">
+                                        <connections>
+                                            <action selector="goBackButton:" destination="amR-RP-sI6" id="xbH-cs-wH8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eC4-SS-MGk"/>
+                                    <barButtonItem title="Download" id="xdX-MX-uAz">
+                                        <connections>
+                                            <action selector="downloadButton:" destination="amR-RP-sI6" id="PIR-Fg-fH8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BQ-i4-N28">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Course Files" id="kDk-9O-Ila"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D4p-bW-l3k">
+                                <rect key="frame" x="0.0" y="72" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cell" id="hrN-hM-Mee">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hrN-hM-Mee" id="gaK-02-3Hx">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="filesTable" destination="D4p-bW-l3k" id="5p2-hk-Fc7"/>
+                        <segue destination="5y1-gL-1qI" kind="show" identifier="goBack" id="osc-BJ-MrX"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2229.5" y="-882.5"/>
+        </scene>
+        <!--Discussions HomeVC-->
+        <scene sceneID="LpK-QP-8N9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEz-yF-h2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="RvS-Pu-gKX" customClass="DiscussionsHomeVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YIP-zT-WLd"/>
+                        <viewControllerLayoutGuide type="bottom" id="JIs-Z2-C6u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="agJ-sY-Chi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jad-qQ-LDD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Go Back" id="qTf-QB-E9Y">
+                                        <connections>
+                                            <action selector="goBackButton:" destination="RvS-Pu-gKX" id="anc-Sq-Qqv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XdG-Ft-kJN"/>
+                                    <barButtonItem title="New Discussion" id="uDN-Gd-Uh7">
+                                        <connections>
+                                            <action selector="newDiscussionButton:" destination="RvS-Pu-gKX" id="Ni1-8f-6c2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uB0-NJ-YzZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Course Discussions" id="1rd-AC-UaZ"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hWN-J7-a5J">
+                                <rect key="frame" x="0.0" y="72" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="GSu-Up-h50">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSu-Up-h50" id="byN-de-1gb">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="discussionTable" destination="hWN-J7-a5J" id="tHM-Xv-bai"/>
+                        <segue destination="5y1-gL-1qI" kind="show" identifier="goBack" id="k7s-rF-nZW"/>
+                        <segue destination="t2s-nq-xee" kind="show" identifier="newDiscussion" id="1ec-qe-utk"/>
+                        <segue destination="MvT-CX-f8H" kind="show" identifier="showDiscussion" id="fEe-gz-K2Q"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2229.5" y="-1604.5"/>
+        </scene>
+        <!--New DiscussionVC-->
+        <scene sceneID="nMx-6l-sEL">
+            <objects>
+                <viewController id="t2s-nq-xee" customClass="NewDiscussionVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5S0-Eg-DSL"/>
+                        <viewControllerLayoutGuide type="bottom" id="xaL-cQ-UFf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Svk-II-2wU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcP-vj-NOo">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Go Back" id="dwH-Om-uL7">
+                                        <connections>
+                                            <action selector="goBackButton:" destination="t2s-nq-xee" id="lJo-lc-mWE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nyh-m0-brr"/>
+                                    <barButtonItem title="Create Discussion" id="Fzm-5L-uVy">
+                                        <connections>
+                                            <action selector="createDiscussionButton:" destination="t2s-nq-xee" id="scF-RA-bS9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoU-h9-XPW">
+                                <rect key="frame" x="0.0" y="95" width="375" height="528"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type Your Discussion Post Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LCE-Ih-FNY">
+                                        <rect key="frame" x="8" y="8" width="359" height="512"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LCE-Ih-FNY" firstAttribute="centerY" secondItem="aoU-h9-XPW" secondAttribute="centerY" id="8fT-6d-bX8"/>
+                                    <constraint firstItem="LCE-Ih-FNY" firstAttribute="centerX" secondItem="aoU-h9-XPW" secondAttribute="centerX" id="9jC-A6-c63"/>
+                                    <constraint firstItem="LCE-Ih-FNY" firstAttribute="bottom" secondItem="aoU-h9-XPW" secondAttribute="bottomMargin" id="EYa-3E-mqw"/>
+                                    <constraint firstItem="LCE-Ih-FNY" firstAttribute="trailing" secondItem="aoU-h9-XPW" secondAttribute="trailingMargin" id="SDJ-lF-liz"/>
+                                    <constraint firstItem="LCE-Ih-FNY" firstAttribute="leading" secondItem="aoU-h9-XPW" secondAttribute="leadingMargin" id="Uok-uA-RZd"/>
+                                    <constraint firstItem="LCE-Ih-FNY" firstAttribute="top" secondItem="aoU-h9-XPW" secondAttribute="topMargin" id="z2j-43-eOy"/>
+                                </constraints>
+                            </scrollView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Discussion Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-pd-avN">
+                                <rect key="frame" x="20" y="57" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Discussion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yso-CX-de9">
+                                <rect key="frame" x="99" y="28" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aoU-h9-XPW" secondAttribute="bottom" constant="44" id="3xO-If-k77"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="trailing" secondItem="QcP-vj-NOo" secondAttribute="trailing" id="3zN-du-C44"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="leading" secondItem="QcP-vj-NOo" secondAttribute="leading" id="Abh-H3-RMA"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="centerX" secondItem="yso-CX-de9" secondAttribute="centerX" id="B2b-vB-enp"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="leading" secondItem="Svk-II-2wU" secondAttribute="leading" id="FhY-2I-5jY"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="top" secondItem="Svk-II-2wU" secondAttribute="top" constant="95" id="KQ2-l4-jqP"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="centerX" secondItem="xX8-pd-avN" secondAttribute="centerX" id="MRd-OA-lzW"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="bottom" secondItem="QcP-vj-NOo" secondAttribute="top" id="WmW-Ff-xQf"/>
+                            <constraint firstItem="aoU-h9-XPW" firstAttribute="top" secondItem="xX8-pd-avN" secondAttribute="bottom" constant="8" symbolic="YES" id="bal-sF-T98"/>
+                            <constraint firstAttribute="trailing" secondItem="aoU-h9-XPW" secondAttribute="trailing" id="pwJ-NY-Grq"/>
+                            <constraint firstItem="yso-CX-de9" firstAttribute="top" secondItem="5S0-Eg-DSL" secondAttribute="bottom" constant="8" symbolic="YES" id="rEw-l8-hXQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="discussionPostContent" destination="LCE-Ih-FNY" id="kSb-pj-R6D"/>
+                        <outlet property="discussionTitle" destination="xX8-pd-avN" id="2fb-V7-g7g"/>
+                        <outlet property="scrollView" destination="aoU-h9-XPW" id="4O4-Wb-CG2"/>
+                        <segue destination="RvS-Pu-gKX" kind="show" identifier="goBack" id="8jM-AZ-E0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8K0-jV-y4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660.5" y="-1273.5"/>
+        </scene>
+        <!--DiscussionVC-->
+        <scene sceneID="ELx-ig-lwo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhB-DB-Xnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="MvT-CX-f8H" customClass="DiscussionVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QtJ-GV-ZXN"/>
+                        <viewControllerLayoutGuide type="bottom" id="i1c-3b-qZO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9fm-ti-o1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3q-Yy-DZ5">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Go Back" id="wlJ-T8-aA0">
+                                        <connections>
+                                            <action selector="goBackButton:" destination="MvT-CX-f8H" id="For-ie-6gg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Gc9-zH-QqP"/>
+                                    <barButtonItem title="New Post" id="Qe8-2j-BCA">
+                                        <connections>
+                                            <action selector="newPostButton:" destination="MvT-CX-f8H" id="uGr-RK-lGJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1XC-WE-tUz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Question for Homework 2" id="4Q5-Vx-Hmq"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rMp-sf-BMd">
+                                <rect key="frame" x="0.0" y="72" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="eUu-u9-FXr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eUu-u9-FXr" id="nrQ-x8-W2w">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="commentsTable" destination="rMp-sf-BMd" id="8y3-H3-raJ"/>
+                        <outlet property="discussionTitle" destination="4Q5-Vx-Hmq" id="ObG-gu-mON"/>
+                        <segue destination="RvS-Pu-gKX" kind="show" identifier="goBack" id="wrV-io-OtJ"/>
+                        <segue destination="UA2-k5-5vd" kind="show" identifier="newComment" id="E4b-vw-5Cv"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2660.5" y="-2031.5"/>
+        </scene>
+        <!--New CommentVC-->
+        <scene sceneID="kkG-s3-aD0">
+            <objects>
+                <viewController id="UA2-k5-5vd" customClass="NewCommentVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q1Q-0q-xFP"/>
+                        <viewControllerLayoutGuide type="bottom" id="wPz-pQ-fV7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KjD-aN-oJv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOk-Rx-KZ6">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Go Back" id="OZp-8e-TF2">
+                                        <connections>
+                                            <action selector="goBackButton:" destination="UA2-k5-5vd" id="a6Q-GF-fCj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mIA-Go-VC6"/>
+                                    <barButtonItem title="Post Comment" id="wLC-XY-e3q">
+                                        <connections>
+                                            <action selector="postCommentButton:" destination="UA2-k5-5vd" id="aww-OX-BnE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiT-so-35x">
+                                <rect key="frame" x="0.0" y="95" width="375" height="528"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type Your Discussion Comment Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zFh-kn-EJp">
+                                        <rect key="frame" x="8" y="8" width="359" height="512"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zFh-kn-EJp" firstAttribute="centerX" secondItem="PiT-so-35x" secondAttribute="centerX" id="5Iy-7u-F4O"/>
+                                    <constraint firstItem="zFh-kn-EJp" firstAttribute="bottom" secondItem="PiT-so-35x" secondAttribute="bottomMargin" id="DFb-j4-cAL"/>
+                                    <constraint firstItem="zFh-kn-EJp" firstAttribute="trailing" secondItem="PiT-so-35x" secondAttribute="trailingMargin" id="V3U-Kb-GVq"/>
+                                    <constraint firstItem="zFh-kn-EJp" firstAttribute="centerY" secondItem="PiT-so-35x" secondAttribute="centerY" id="lKc-sW-lWb"/>
+                                    <constraint firstItem="zFh-kn-EJp" firstAttribute="top" secondItem="PiT-so-35x" secondAttribute="topMargin" id="x1f-hb-mLX"/>
+                                    <constraint firstItem="zFh-kn-EJp" firstAttribute="leading" secondItem="PiT-so-35x" secondAttribute="leadingMargin" id="xUg-VD-FC1"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieL-6H-Msu">
+                                <rect key="frame" x="113" y="57" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question for Homework 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVD-Vx-F1e">
+                                <rect key="frame" x="89" y="28" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PiT-so-35x" firstAttribute="trailing" secondItem="TOk-Rx-KZ6" secondAttribute="trailing" id="8bf-RD-hTi"/>
+                            <constraint firstItem="PiT-so-35x" firstAttribute="top" secondItem="KjD-aN-oJv" secondAttribute="top" constant="95" id="9Tl-v2-Fim"/>
+                            <constraint firstItem="PiT-so-35x" firstAttribute="leading" secondItem="KjD-aN-oJv" secondAttribute="leading" id="B4z-ul-jhn"/>
+                            <constraint firstAttribute="trailing" secondItem="PiT-so-35x" secondAttribute="trailing" id="Ngo-OB-SXt"/>
+                            <constraint firstItem="HVD-Vx-F1e" firstAttribute="top" secondItem="q1Q-0q-xFP" secondAttribute="bottom" constant="8" symbolic="YES" id="TIv-xU-4Tr"/>
+                            <constraint firstItem="PiT-so-35x" firstAttribute="centerX" secondItem="HVD-Vx-F1e" secondAttribute="centerX" id="Uu5-Ba-vgQ"/>
+                            <constraint firstItem="PiT-so-35x" firstAttribute="leading" secondItem="TOk-Rx-KZ6" secondAttribute="leading" id="Ycn-V9-LgR"/>
+                            <constraint firstItem="PiT-so-35x" firstAttribute="bottom" secondItem="TOk-Rx-KZ6" secondAttribute="top" id="bbK-7H-6ZN"/>
+                            <constraint firstAttribute="bottom" secondItem="PiT-so-35x" secondAttribute="bottom" constant="44" id="sZn-cu-ABl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="discussionTitle" destination="HVD-Vx-F1e" id="3Yb-HA-xxg"/>
+                        <outlet property="newCommentContent" destination="zFh-kn-EJp" id="CmZ-QA-sUG"/>
+                        <outlet property="scrollView" destination="PiT-so-35x" id="0Jr-qt-zv0"/>
+                        <segue destination="MvT-CX-f8H" kind="show" identifier="goBack" id="iSJ-31-QFz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsh-DU-9fQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3089.5" y="-2031.5"/>
         </scene>
     </scenes>
     <resources>
