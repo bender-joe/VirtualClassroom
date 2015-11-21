@@ -42,6 +42,7 @@
 		F3DC0FEC1C00CFAB008A7E5C /* FilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FEB1C00CFAB008A7E5C /* FilesVC.swift */; };
 		F3DC0FEE1C00CFDD008A7E5C /* NewCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FED1C00CFDD008A7E5C /* NewCommentVC.swift */; };
 		F3DC0FF01C00D002008A7E5C /* NewDiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FEF1C00D002008A7E5C /* NewDiscussionVC.swift */; };
+		F3DC0FF21C010793008A7E5C /* DiscussionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FF11C010793008A7E5C /* DiscussionCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		F3DC0FEB1C00CFAB008A7E5C /* FilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesVC.swift; sourceTree = "<group>"; };
 		F3DC0FED1C00CFDD008A7E5C /* NewCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCommentVC.swift; sourceTree = "<group>"; };
 		F3DC0FEF1C00D002008A7E5C /* NewDiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiscussionVC.swift; sourceTree = "<group>"; };
+		F3DC0FF11C010793008A7E5C /* DiscussionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				F3D8A74B1BC198B500686068 /* AppDelegate.swift */,
 				F3D8A74D1BC198B500686068 /* ViewController.swift */,
 				F3D8A74F1BC198B500686068 /* Main.storyboard */,
+				F3DC0FF11C010793008A7E5C /* DiscussionCell.swift */,
 				0245AB7A1BFFEE860089B089 /* CreateCourse.swift */,
 				0245AB7D1C0028300089B089 /* CourseGrades.swift */,
 				F3A0FE451BD467560075D795 /* RegisterViewController.swift */,
@@ -365,6 +368,7 @@
 				F3DC0FEE1C00CFDD008A7E5C /* NewCommentVC.swift in Sources */,
 				F3DC0FEC1C00CFAB008A7E5C /* FilesVC.swift in Sources */,
 				F3DC0FEA1C00CF8F008A7E5C /* DiscussionVC.swift in Sources */,
+				F3DC0FF21C010793008A7E5C /* DiscussionCell.swift in Sources */,
 				F3DC0FE81C00CF63008A7E5C /* DiscussionsHomeVC.swift in Sources */,
 				0245AB7C1BFFEFFF0089B089 /* CreateCourse.swift in Sources */,
 				F32396161BFD2038002D9CC3 /* SearchVC.swift in Sources */,

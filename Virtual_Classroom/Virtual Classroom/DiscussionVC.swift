@@ -10,8 +10,9 @@ import Parse
 import UIKit
 
 class DiscussionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var dummydiscussionPosts = ["I don't understand what this question is asking. What should I put for the answer"]
+    var dummydiscussionPosts = [String]()
     var currentCourseID : String?
+    var discTitle : String?
 
     @IBOutlet var discussionTitle: UINavigationItem!
     
@@ -31,32 +32,36 @@ class DiscussionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "goBack"){
-            let courseViewController = segue.destinationViewController as! DiscussionsHomeVC
+            let discHome = segue.destinationViewController as! DiscussionsHomeVC
             let currentCourseID = sender as! String
-            courseViewController.currentCourseID = currentCourseID
+            discHome.currentCourseID = currentCourseID
         }
         if(segue.identifier == "newComment"){
-            let courseViewController = segue.destinationViewController as! NewCommentVC
-            let currentCourseID = sender as! String
-            courseViewController.currentCourseID = currentCourseID
+            let newComment = segue.destinationViewController as! NewCommentVC
+            let currentCourseID = self.currentCourseID
+            let title = self.discTitle
+            let posts = self.dummydiscussionPosts
+            newComment.currentCourseID = currentCourseID
+            newComment.discTitle = title
+            newComment.discPosts = posts
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.commentsTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         commentsTable.delegate = self
         commentsTable.dataSource = self
         commentsTable.rowHeight = UITableViewAutomaticDimension
         commentsTable.estimatedRowHeight = UITableViewAutomaticDimension
+        discussionTitle.title = discTitle
     }
-    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
+        return 200.0
+    }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
+
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
         return dummydiscussionPosts.count
@@ -64,11 +69,19 @@ class DiscussionVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
-        let cell  = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+        return basicCellAtIndexPath(indexPath)
         //
-                cell.textLabel?.text = dummydiscussionPosts[indexPath.row]
+//                cell.textLabel?.text = dummydiscussionPosts[indexPath.row]
         //        cell.accessoryType = .DisclosureIndicator
+//        return cell
+    }
+    func basicCellAtIndexPath(indexPath:NSIndexPath) -> DiscussionCell {
+        let cell = commentsTable.dequeueReusableCellWithIdentifier("DiscussionCell") as! DiscussionCell
+        setTitleForCell(cell, indexPath: indexPath)
         return cell
+    }
+    func setTitleForCell(cell:DiscussionCell, indexPath:NSIndexPath) {
+        cell.titleLabel.text = dummydiscussionPosts[indexPath.row]
     }
     
     override func didReceiveMemoryWarning() {

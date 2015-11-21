@@ -478,7 +478,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zrY-aX-u0y"/>
                                     <barButtonItem style="plain" id="HSr-Xa-2Md">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uTa-q6-5Wc">
-                                            <rect key="frame" x="311" y="7" width="48" height="30"/>
+                                            <rect key="frame" x="298" y="7" width="61" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Logout"/>
@@ -1685,6 +1685,7 @@ Must contain at least uppercase letter</string>
                         <outlet property="discussionTitle" destination="xX8-pd-avN" id="2fb-V7-g7g"/>
                         <outlet property="scrollView" destination="aoU-h9-XPW" id="4O4-Wb-CG2"/>
                         <segue destination="RvS-Pu-gKX" kind="show" identifier="goBack" id="8jM-AZ-E0Y"/>
+                        <segue destination="RvS-Pu-gKX" kind="show" identifier="createDiscussion" id="UL0-0z-HNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8K0-jV-y4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1732,13 +1733,31 @@ Must contain at least uppercase letter</string>
                                 <rect key="frame" x="0.0" y="72" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="eUu-u9-FXr">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscussionCell" rowHeight="49" id="eUu-u9-FXr" customClass="DiscussionCell" customModule="Virtual_Classroom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eUu-u9-FXr" id="nrQ-x8-W2w">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgp-Qh-xqC">
+                                                    <rect key="frame" x="21" y="10" width="334" height="18"/>
+                                                    <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lgp-Qh-xqC" firstAttribute="top" secondItem="nrQ-x8-W2w" secondAttribute="top" constant="10" id="EDb-bd-xNw"/>
+                                                <constraint firstAttribute="bottom" secondItem="Lgp-Qh-xqC" secondAttribute="bottom" constant="20" id="JBS-ER-Ah1"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lgp-Qh-xqC" secondAttribute="trailing" constant="20" id="tom-AT-CMB"/>
+                                                <constraint firstItem="Lgp-Qh-xqC" firstAttribute="leading" secondItem="nrQ-x8-W2w" secondAttribute="leading" constant="21" id="vxO-R6-Rk0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Lgp-Qh-xqC" id="gMb-Ny-fFH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1835,6 +1854,7 @@ Must contain at least uppercase letter</string>
                         <outlet property="newCommentContent" destination="zFh-kn-EJp" id="CmZ-QA-sUG"/>
                         <outlet property="scrollView" destination="PiT-so-35x" id="0Jr-qt-zv0"/>
                         <segue destination="MvT-CX-f8H" kind="show" identifier="goBack" id="iSJ-31-QFz"/>
+                        <segue destination="MvT-CX-f8H" kind="show" identifier="newReply" id="ItT-wm-p8o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsh-DU-9fQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1847,7 +1867,7 @@ Must contain at least uppercase letter</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wrV-io-OtJ"/>
-        <segue reference="iSJ-31-QFz"/>
+        <segue reference="ItT-wm-p8o"/>
         <segue reference="k7s-rF-nZW"/>
         <segue reference="YzJ-Y1-ROc"/>
         <segue reference="OrP-j8-9fT"/>

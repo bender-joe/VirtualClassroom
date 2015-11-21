@@ -23,6 +23,11 @@ class NewDiscussionVC: UIViewController {
     }
     
     @IBAction func createDiscussionButton(sender: AnyObject) {
+        let title = discussionTitle.text!
+        let content = discussionPostContent.text
+        let courseId = currentCourseID!
+        let result = [courseId, title, content]
+        performSegueWithIdentifier("createDiscussion", sender: result)
         
     }
     
@@ -32,11 +37,16 @@ class NewDiscussionVC: UIViewController {
             let currentCourseID = sender as! String
             courseViewController.currentCourseID = currentCourseID
         }
-//        if(segue.identifier == "newDiscussion"){
-//            let courseViewController = segue.destinationViewController as! NewDiscussionVC
-//            let currentCourseID = sender as! String
-//            courseViewController.currentCourseID = currentCourseID
-//        }
+        if(segue.identifier == "createDiscussion"){
+            let discussionHomeVC = segue.destinationViewController as! DiscussionsHomeVC
+            let currentCourseID = self.currentCourseID!
+            let title = self.discussionTitle.text
+            let content = self.discussionPostContent.text
+            discussionHomeVC.currentCourseID = currentCourseID
+            discussionHomeVC.dummyDiscussionPosts.append(content!)
+            discussionHomeVC.dummyDiscussionTitles.append(title!)
+            
+        }
     }
     
     override func viewDidLoad() {

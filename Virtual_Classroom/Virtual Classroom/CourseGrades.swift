@@ -16,7 +16,7 @@ class CourseGrades : UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var titleString: String?
-    var studentsGrades: [String] = []
+    var studentsGrades = ["Files", "Discussions"]
     
     
     override func viewDidLoad(){

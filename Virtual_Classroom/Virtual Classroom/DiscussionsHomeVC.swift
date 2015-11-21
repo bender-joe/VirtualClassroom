@@ -13,7 +13,9 @@ class DiscussionsHomeVC: UIViewController, UITableViewDelegate, UITableViewDataS
     var currentCourseID : String?
     var discussionParam : String?
     
-    var dummyDiscussions = ["Hello World Program Not Working! HELP!"]
+    var dummyDiscussionTitles = ["Hello World Program Not Working! HELP!"]
+    var dummyDiscussionPosts = ["how do i fix this really long posting..... i like to type a lot of text?"]
+    var lastSelectedIndexPath : NSIndexPath?
     
     @IBOutlet var discussionTable: UITableView!
     
@@ -37,7 +39,7 @@ class DiscussionsHomeVC: UIViewController, UITableViewDelegate, UITableViewDataS
     
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
-        return dummyDiscussions.count
+        return dummyDiscussionTitles.count
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -52,24 +54,29 @@ class DiscussionsHomeVC: UIViewController, UITableViewDelegate, UITableViewDataS
             courseViewController.currentCourseID = currentCourseID
         }
         if(segue.identifier == "showDiscussion"){
-            let courseViewController = segue.destinationViewController as! DiscussionVC
-            let currentCourseID = sender as! String
-            courseViewController.currentCourseID = currentCourseID
+            let discussion = segue.destinationViewController as! DiscussionVC
+            let currentCourseID = self.currentCourseID!
+            let post = dummyDiscussionPosts[(lastSelectedIndexPath!.row)]
+            let title = dummyDiscussionTitles[lastSelectedIndexPath!.row]
+            discussion.currentCourseID = currentCourseID
+            discussion.dummydiscussionPosts.append(post)
+            discussion.discTitle = title
         }
     }
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
         let cell  = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
         //
-                cell.textLabel?.text = dummyDiscussions[indexPath.row]
+                cell.textLabel?.text = dummyDiscussionTitles[indexPath.row]
                 cell.accessoryType = .DisclosureIndicator
         return cell
     }
     
     // This is used when the user selects a discussion... need to perform a segue to the discussion page
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("User going to view discussion \(dummyDiscussions[indexPath.row])")
+        print("User going to view discussion \(dummyDiscussionTitles[indexPath.row])")
 //        let discussionTitle = dummyDiscussions[indexPath.row]
+        lastSelectedIndexPath = indexPath
         performSegueWithIdentifier("showDiscussion", sender: currentCourseID)
     }
     

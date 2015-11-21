@@ -11,9 +11,12 @@ import Parse
 
 class NewCommentVC: UIViewController {
     var currentCourseID : String?
+    var discTitle : String?
+    var discPosts = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        discussionTitle.text = discTitle
     }
     
     @IBOutlet var discussionTitle: UILabel!
@@ -27,13 +30,28 @@ class NewCommentVC: UIViewController {
     }
     
     @IBAction func postCommentButton(sender: AnyObject) {
+        discPosts.append(newCommentContent.text)
+        performSegueWithIdentifier("newReply", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "goBack"){
-            let courseViewController = segue.destinationViewController as! DiscussionVC
-            let currentCourseID = sender as! String
-            courseViewController.currentCourseID = currentCourseID
+            let discussion = segue.destinationViewController as! DiscussionVC
+            let currentCourseID = self.currentCourseID
+            let title = self.discussionTitle.text!
+            let posts = self.discPosts
+            discussion.currentCourseID = currentCourseID
+            discussion.dummydiscussionPosts = posts
+            discussion.discTitle = title
+        }
+        if(segue.identifier == "newReply"){
+            let discussion = segue.destinationViewController as! DiscussionVC
+            let currentCourseID = self.currentCourseID
+            let title = self.discussionTitle.text!
+            let posts = self.discPosts
+            discussion.currentCourseID = currentCourseID
+            discussion.dummydiscussionPosts = posts
+            discussion.discTitle = title
         }
     }
     
