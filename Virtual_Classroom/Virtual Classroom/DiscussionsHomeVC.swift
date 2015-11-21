@@ -11,8 +11,9 @@ import UIKit
 
 class DiscussionsHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var currentCourseID : String?
+    var discussionParam : String?
     
-    var dummyDiscussions = ["Question for Homework 2"]
+    var dummyDiscussions = ["Hello World Program Not Working! HELP!"]
     
     @IBOutlet var discussionTable: UITableView!
     

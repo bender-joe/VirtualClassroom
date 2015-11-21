@@ -23,6 +23,7 @@ class NewDiscussionVC: UIViewController {
     }
     
     @IBAction func createDiscussionButton(sender: AnyObject) {
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

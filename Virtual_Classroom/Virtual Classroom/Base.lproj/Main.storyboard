@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1479,7 +1479,6 @@ Must contain at least uppercase letter</string>
         <!--FilesVC-->
         <scene sceneID="Jsy-tm-rgt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t5x-ue-VJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="amR-RP-sI6" customClass="FilesVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ILX-aL-cp2"/>
@@ -1537,13 +1536,13 @@ Must contain at least uppercase letter</string>
                         <segue destination="5y1-gL-1qI" kind="show" identifier="goBack" id="osc-BJ-MrX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5x-ue-VJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2229.5" y="-882.5"/>
         </scene>
         <!--Discussions HomeVC-->
         <scene sceneID="LpK-QP-8N9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WEz-yF-h2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RvS-Pu-gKX" customClass="DiscussionsHomeVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YIP-zT-WLd"/>
@@ -1603,6 +1602,7 @@ Must contain at least uppercase letter</string>
                         <segue destination="MvT-CX-f8H" kind="show" identifier="showDiscussion" id="fEe-gz-K2Q"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEz-yF-h2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2229.5" y="-1604.5"/>
         </scene>
@@ -1694,7 +1694,6 @@ Must contain at least uppercase letter</string>
         <!--DiscussionVC-->
         <scene sceneID="ELx-ig-lwo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VhB-DB-Xnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="MvT-CX-f8H" customClass="DiscussionVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QtJ-GV-ZXN"/>
@@ -1713,7 +1712,7 @@ Must contain at least uppercase letter</string>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gc9-zH-QqP"/>
-                                    <barButtonItem title="New Post" id="Qe8-2j-BCA">
+                                    <barButtonItem title="Reply" id="Qe8-2j-BCA">
                                         <connections>
                                             <action selector="newPostButton:" destination="MvT-CX-f8H" id="uGr-RK-lGJ"/>
                                         </connections>
@@ -1754,6 +1753,7 @@ Must contain at least uppercase letter</string>
                         <segue destination="UA2-k5-5vd" kind="show" identifier="newComment" id="E4b-vw-5Cv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhB-DB-Xnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2660.5" y="-2031.5"/>
         </scene>
@@ -1778,7 +1778,7 @@ Must contain at least uppercase letter</string>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mIA-Go-VC6"/>
-                                    <barButtonItem title="Post Comment" id="wLC-XY-e3q">
+                                    <barButtonItem title="Post Reply" id="wLC-XY-e3q">
                                         <connections>
                                             <action selector="postCommentButton:" destination="UA2-k5-5vd" id="aww-OX-BnE"/>
                                         </connections>
@@ -1803,15 +1803,15 @@ Must contain at least uppercase letter</string>
                                     <constraint firstItem="zFh-kn-EJp" firstAttribute="leading" secondItem="PiT-so-35x" secondAttribute="leadingMargin" id="xUg-VD-FC1"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieL-6H-Msu">
-                                <rect key="frame" x="113" y="57" width="149" height="21"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question for Homework 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVD-Vx-F1e">
                                 <rect key="frame" x="89" y="28" width="196" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Reply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieL-6H-Msu">
+                                <rect key="frame" x="129" y="57" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1846,6 +1846,9 @@ Must contain at least uppercase letter</string>
         <image name="App_Backgorund.jpg" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wrV-io-OtJ"/>
+        <segue reference="iSJ-31-QFz"/>
+        <segue reference="k7s-rF-nZW"/>
         <segue reference="YzJ-Y1-ROc"/>
         <segue reference="OrP-j8-9fT"/>
         <segue reference="PIA-8c-YnF"/>
