@@ -64,7 +64,7 @@ class InstViewController : UIViewController, UITextFieldDelegate {
                                 let coursePrefix = singleCourse?.valueForKey("coursePrefix") as! String
                                 let courseNumber = singleCourse?.valueForKey("courseNumber") as! String
                                 print(coursePrefix, courseNumber)
-                                self.assocCourses.append(coursePrefix + courseNumber)
+                                self.assocCourses.append(coursePrefix + " " + courseNumber)
                                 print(self.assocCourses)
                                 //self.tableView.reloadData()
                             } else {
@@ -100,6 +100,25 @@ class InstViewController : UIViewController, UITextFieldDelegate {
         cell.textLabel?.text = self.assocCourses[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        self.performSegueWithIdentifier("showCourse", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        if (segue.identifier == "showCourse"){
+            var upcoming: CourseGrades = segue.destinationViewController as! CourseGrades
+            
+            let indexPath = self.tableViewOutlet.indexPathForSelectedRow
+            
+            let titleString = self.assocCourses[(indexPath?.row)!]
+            
+            upcoming.titleString = titleString
+            
+            self.tableViewOutlet.deselectRowAtIndexPath(indexPath!, animated: true)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

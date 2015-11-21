@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0245AB751BFFCCEA0089B089 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245AB741BFFCCE90089B089 /* GlobalVariables.swift */; settings = {ASSET_TAGS = (); }; };
+		0245AB7C1BFFEFFF0089B089 /* CreateCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245AB7A1BFFEE860089B089 /* CreateCourse.swift */; };
+		0245AB7E1C0028310089B089 /* CourseGrades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245AB7D1C0028300089B089 /* CourseGrades.swift */; settings = {ASSET_TAGS = (); }; };
 		F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F323960B1BFD0321002D9CC3 /* InstViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F32396161BFD2038002D9CC3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32396151BFD2038002D9CC3 /* SearchVC.swift */; settings = {ASSET_TAGS = (); }; };
 		F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F396C9301BD4245E00E5CA16 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -55,7 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0245AB741BFFCCE90089B089 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		0245AB7A1BFFEE860089B089 /* CreateCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCourse.swift; sourceTree = "<group>"; };
+		0245AB7D1C0028300089B089 /* CourseGrades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseGrades.swift; sourceTree = "<group>"; };
 		F323960B1BFD0321002D9CC3 /* InstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstViewController.swift; sourceTree = "<group>"; };
 		F32396151BFD2038002D9CC3 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		F396C9301BD4245E00E5CA16 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -176,9 +178,10 @@
 				F3D8A74B1BC198B500686068 /* AppDelegate.swift */,
 				F3D8A74D1BC198B500686068 /* ViewController.swift */,
 				F3D8A74F1BC198B500686068 /* Main.storyboard */,
+				0245AB7A1BFFEE860089B089 /* CreateCourse.swift */,
+				0245AB7D1C0028300089B089 /* CourseGrades.swift */,
 				F3A0FE451BD467560075D795 /* RegisterViewController.swift */,
 				F323960B1BFD0321002D9CC3 /* InstViewController.swift */,
-				0245AB741BFFCCE90089B089 /* GlobalVariables.swift */,
 				F396C9301BD4245E00E5CA16 /* LoginViewController.swift */,
 				F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */,
 				F32396151BFD2038002D9CC3 /* SearchVC.swift */,
@@ -340,10 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0245AB7C1BFFEFFF0089B089 /* CreateCourse.swift in Sources */,
 				F32396161BFD2038002D9CC3 /* SearchVC.swift in Sources */,
 				F3D8A74E1BC198B500686068 /* ViewController.swift in Sources */,
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
-				0245AB751BFFCCEA0089B089 /* GlobalVariables.swift in Sources */,
+				0245AB7E1C0028310089B089 /* CourseGrades.swift in Sources */,
 				F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */,
 				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
 				F3A0FE461BD467560075D795 /* RegisterViewController.swift in Sources */,
