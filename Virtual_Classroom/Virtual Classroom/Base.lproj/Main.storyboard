@@ -520,6 +520,7 @@
                         <outlet property="coureTitleField" destination="Odq-mp-PJM" id="Ubh-rv-bBK"/>
                         <outlet property="courseGrade" destination="yOT-Q3-Odb" id="08H-7D-ePw"/>
                         <outlet property="courseOptionsTable" destination="z7k-zt-yh1" id="GGY-DE-hAW"/>
+                        <segue destination="amR-RP-sI6" kind="show" identifier="coursefiles" id="c4S-wK-Mv4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOE-Dx-Iyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1138,10 +1139,11 @@ Must contain at least uppercase letter</string>
             </objects>
             <point key="canvasLocation" x="1402" y="750"/>
         </scene>
-        <!--Course View Controller-->
+        <!--FilesVC-->
         <scene sceneID="Jsy-tm-rgt">
             <objects>
-                <viewController id="amR-RP-sI6" customClass="CourseViewController" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5x-ue-VJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="amR-RP-sI6" customClass="FilesVC" customModule="Virtual_Classroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ILX-aL-cp2"/>
                         <viewControllerLayoutGuide type="bottom" id="OnT-Au-3bF"/>
@@ -1190,12 +1192,7 @@ Must contain at least uppercase letter</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="coureTitleField" destination="kDk-9O-Ila" id="19C-0v-Szl"/>
-                        <outlet property="courseOptionsTable" destination="D4p-bW-l3k" id="LOh-zD-qKO"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t5x-ue-VJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2229.5" y="-882.5"/>
         </scene>

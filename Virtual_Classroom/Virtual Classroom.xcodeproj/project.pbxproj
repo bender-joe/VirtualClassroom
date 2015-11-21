@@ -35,6 +35,7 @@
 		F3D8A77D1BC1A0E800686068 /* App_Backgorund.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */; settings = {ASSET_TAGS = (); }; };
 		F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F3DC0FDC1BFEE032008A7E5C /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F3DC0FDE1C005B65008A7E5C /* FilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC0FDD1C005B65008A7E5C /* FilesVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		F3D8A77C1BC1A0E800686068 /* App_Backgorund.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = App_Backgorund.jpg; sourceTree = "<group>"; };
 		F3D8A7801BC1C83800686068 /* CourseHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseHomeViewController.swift; sourceTree = "<group>"; };
 		F3DC0FDB1BFEE032008A7E5C /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		F3DC0FDD1C005B65008A7E5C /* FilesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				F3D8A74B1BC198B500686068 /* AppDelegate.swift */,
 				F3D8A74D1BC198B500686068 /* ViewController.swift */,
 				F3D8A74F1BC198B500686068 /* Main.storyboard */,
+				F3DC0FDD1C005B65008A7E5C /* FilesVC.swift */,
 				F3A0FE451BD467560075D795 /* RegisterViewController.swift */,
 				F323960B1BFD0321002D9CC3 /* InstViewController.swift */,
 				F396C9301BD4245E00E5CA16 /* LoginViewController.swift */,
@@ -346,6 +349,7 @@
 				F3D8A74C1BC198B500686068 /* AppDelegate.swift in Sources */,
 				F323960C1BFD0321002D9CC3 /* InstViewController.swift in Sources */,
 				F3D8A7811BC1C83800686068 /* CourseHomeViewController.swift in Sources */,
+				F3DC0FDE1C005B65008A7E5C /* FilesVC.swift in Sources */,
 				F3A0FE461BD467560075D795 /* RegisterViewController.swift in Sources */,
 				F396C9311BD4245E00E5CA16 /* LoginViewController.swift in Sources */,
 				F3D8A7541BC198B500686068 /* Virtual_Classroom.xcdatamodeld in Sources */,

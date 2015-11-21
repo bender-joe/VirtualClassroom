@@ -13,6 +13,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var currentCourseID : String?
     var currentCourseName : String?
     
+    
     // course functionalities to display as table cells
     let courseFuncts = ["Discussions", "Files"]
 
@@ -31,6 +32,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         courseOptionsTable.delegate = self
         courseOptionsTable.dataSource = self
         // Query the Course Table to get the name to display as the title
+        if (self.currentCourseID != nil) {
         let query = PFQuery(className: "Course")
         query.whereKey("objectId", equalTo: self.currentCourseID!)
         query.findObjectsInBackgroundWithBlock ({ (resultObjects:[PFObject]?,error: NSError?) -> Void in
@@ -71,6 +73,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
         })
+        }
         self.courseOptionsTable.reloadData()
         
         
@@ -82,11 +85,17 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     // This is used when the user selects a course funct... need to perform a segue to the course page
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-////        print("User going to view course \(userEnrolledCourseIDs[indexPath.row])")
-//        
-//        
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("User going to view functionality \(courseFuncts[indexPath.row])")
+        let userSelection = courseFuncts[indexPath.row]
+        
+        if(userSelection == "Files"){
+            performSegueWithIdentifier("coursefiles", sender: self)
+        }
+        
+        
+        
+    }
     
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
