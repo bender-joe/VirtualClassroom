@@ -1162,7 +1162,11 @@ Must contain at least uppercase letter</string>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eC4-SS-MGk"/>
-                                    <barButtonItem title="Download" id="xdX-MX-uAz"/>
+                                    <barButtonItem title="Download" id="xdX-MX-uAz">
+                                        <connections>
+                                            <action selector="downloadButton:" destination="amR-RP-sI6" id="PIR-Fg-fH8"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BQ-i4-N28">
@@ -1193,6 +1197,7 @@ Must contain at least uppercase letter</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="filesTable" destination="D4p-bW-l3k" id="5p2-hk-Fc7"/>
                         <segue destination="5y1-gL-1qI" kind="show" identifier="goBack" id="osc-BJ-MrX"/>
                     </connections>
                 </viewController>
@@ -1464,8 +1469,8 @@ Must contain at least uppercase letter</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sB9-jj-NgC"/>
-        <segue reference="k7s-rF-nZW"/>
-        <segue reference="8jM-AZ-E0Y"/>
+        <segue reference="osc-BJ-MrX"/>
         <segue reference="HIK-4u-Zpa"/>
+        <segue reference="8jM-AZ-E0Y"/>
     </inferredMetricsTieBreakers>
 </document>
