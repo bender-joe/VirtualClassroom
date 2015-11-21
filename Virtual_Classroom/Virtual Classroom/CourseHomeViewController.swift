@@ -68,16 +68,8 @@ class CourseHomeViewController: UIViewController, UITableViewDelegate, UITableVi
     // This is used when the user selects a course... need to perform a segue to the course page
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("User going to view course \(userEnrolledCourseIDs[indexPath.row])")
-        let currentCourseID = userEnrolledCourseIDs[indexPath.row]
-        performSegueWithIdentifier("segueToCourse", sender: currentCourseID)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "segueToCourse"){
-            let courseViewController = segue.destinationViewController as! CourseViewController
-            let currentCourseID = sender as! String
-            courseViewController.currentCourseID = currentCourseID
-        }
+        
+        
     }
     
     // This function will need DB calls to get the courses for the user, and load their information
