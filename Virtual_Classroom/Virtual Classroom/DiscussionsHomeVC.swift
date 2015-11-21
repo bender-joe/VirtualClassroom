@@ -11,16 +11,32 @@ import UIKit
 
 class DiscussionsHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var currentCourseID : String?
+    
+    var dummyDiscussions = ["Question for Homework 2"]
+    
+    @IBOutlet var discussionTable: UITableView!
+    
+    @IBAction func newDiscussionButton(sender: AnyObject) {
+        
+        
+        performSegueWithIdentifier("newDiscussion", sender: currentCourseID)
+    }
+    
+    
     @IBAction func goBackButton(sender: AnyObject) {
         performSegueWithIdentifier("goBack", sender: currentCourseID)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.discussionTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        discussionTable.delegate = self
+        discussionTable.dataSource = self
     }
+    
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
-        return 1
+        return dummyDiscussions.count
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -29,19 +45,31 @@ class DiscussionsHomeVC: UIViewController, UITableViewDelegate, UITableViewDataS
             let currentCourseID = sender as! String
             courseViewController.currentCourseID = currentCourseID
         }
-//        if(segue.identifier == "coursediscussions"){
-//            let courseViewController = segue.destinationViewController as! DiscussionsHomeVC
-//            let currentCourseID = sender as! String
-//            courseViewController.currentCourseID = currentCourseID
-//        }
+        if(segue.identifier == "newDiscussion"){
+            let courseViewController = segue.destinationViewController as! NewDiscussionVC
+            let currentCourseID = sender as! String
+            courseViewController.currentCourseID = currentCourseID
+        }
+        if(segue.identifier == "showDiscussion"){
+            let courseViewController = segue.destinationViewController as! DiscussionVC
+            let currentCourseID = sender as! String
+            courseViewController.currentCourseID = currentCourseID
+        }
     }
     // This function will need DB calls to get the courses for the user, and load their information
     func tableView(tableView : UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
         let cell  = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
         //
-        //        cell.textLabel?.text = courseFuncts[indexPath.row]
-        //        cell.accessoryType = .DisclosureIndicator
+                cell.textLabel?.text = dummyDiscussions[indexPath.row]
+                cell.accessoryType = .DisclosureIndicator
         return cell
+    }
+    
+    // This is used when the user selects a discussion... need to perform a segue to the discussion page
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("User going to view discussion \(dummyDiscussions[indexPath.row])")
+//        let discussionTitle = dummyDiscussions[indexPath.row]
+        performSegueWithIdentifier("showDiscussion", sender: currentCourseID)
     }
     
     // Function to help control the keyboard views

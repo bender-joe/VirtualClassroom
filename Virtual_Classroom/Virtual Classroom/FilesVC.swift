@@ -37,6 +37,7 @@ class FilesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         DisplayAlert("Downloading File To Your Device",
             message: "\(fileSelection) is being downloaded.")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.filesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
