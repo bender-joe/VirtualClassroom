@@ -90,11 +90,24 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let userSelection = courseFuncts[indexPath.row]
         
         if(userSelection == "Files"){
-            performSegueWithIdentifier("coursefiles", sender: self)
+            performSegueWithIdentifier("coursefiles", sender: currentCourseID)
         }
-        
-        
-        
+        if(userSelection == "Discussions"){
+            performSegueWithIdentifier("coursediscussions", sender: currentCourseID)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "coursefiles"){
+            let courseViewController = segue.destinationViewController as! FilesVC
+            let currentCourseID = sender as! String
+            courseViewController.currentCourseID = currentCourseID
+        }
+        if(segue.identifier == "coursediscussions"){
+            let courseViewController = segue.destinationViewController as! DiscussionsHomeVC
+            let currentCourseID = sender as! String
+            courseViewController.currentCourseID = currentCourseID
+        }
     }
     
     // This function will need DB calls to get the courses for the user, and load their information
