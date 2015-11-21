@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     // Function to Login and segue to the correct view if user is instructor or student
     @IBAction func login(sender: AnyObject) {
         //this is to attempt to solve a parse bug that occurs for the invalid session token error
-        PFUser.logOut()
+        //PFUser.logOut()
             
         print(username.text)
         print(password.text)
