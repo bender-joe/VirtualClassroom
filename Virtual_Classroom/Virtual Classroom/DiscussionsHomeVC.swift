@@ -14,7 +14,7 @@ class DiscussionsHomeVC: UIViewController, UITableViewDelegate, UITableViewDataS
     var discussionParam : String?
     
     var dummyDiscussionTitles = ["Hello World Program Not Working! HELP!"]
-    var dummyDiscussionPosts = ["how do i fix this really long posting..... i like to type a lot of text?"]
+    var dummyDiscussionPosts = ["For some reason, my hello world program will not work for me. I restarted the computer and that still didn't fix the issue... Someone please help me!!"]
     var lastSelectedIndexPath : NSIndexPath?
     
     @IBOutlet var discussionTable: UITableView!

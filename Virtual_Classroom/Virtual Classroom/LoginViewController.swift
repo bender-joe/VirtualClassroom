@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
             }
 
             PFUser.logInWithUsernameInBackground(username.text!, password: password.text!, block: { (user, error) -> Void in
-                if user != nil {
+                if error == nil && user != nil {
                     // logged in
                     // query the database to check the userType
                     
